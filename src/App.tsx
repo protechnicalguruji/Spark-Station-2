@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { PageRoute } from './types';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -47,6 +48,7 @@ export default function App() {
       </main>
 
       <Footer onRouteChange={setActiveRoute} />
+      <Analytics />
     </div>
   );
 }
