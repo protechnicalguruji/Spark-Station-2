@@ -194,7 +194,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
             onClick={() => onRouteChange('services')}
             className="btn-secondary !px-8 !py-3.5 text-sm"
           >
-            <span>View All 8 Specialized Services</span>
+            <span>View All 7 Specialized Services</span>
             <ArrowRight size={16} />
           </button>
         </div>

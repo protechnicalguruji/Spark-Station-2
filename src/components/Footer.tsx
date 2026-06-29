@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>Web Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>Mobile Apps</li>
+              <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>Product Design</li>
               <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>UI/UX Design</li>
               <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>Branding & Identity</li>
               <li className="hover:text-white transition-colors cursor-pointer" onClick={() => handleLink('services')}>E-Commerce</li>

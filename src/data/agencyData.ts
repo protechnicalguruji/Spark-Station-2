@@ -85,7 +85,7 @@ export const PROBLEMS = [
 ];
 
 export const SOLUTIONS = [
-  "Modern, fast websites & apps built to convert",
+  "Modern, fast websites & digital solutions built to convert",
   "UX-first design that delights your users",
   "Clean, maintainable code that scales",
   "A dedicated expert team behind every project",
@@ -124,15 +124,6 @@ export const SERVICES: ServiceItem[] = [
     color: "#58A6FF",
     benefits: ["Fast Delivery", "Quality Code", "Custom Pricing", "Ongoing Support"],
     useCases: ["SaaS Landing Pages", "Company Websites", "Web Applications", "Customer Portals"]
-  },
-  {
-    id: "app-dev",
-    title: "Mobile App Development",
-    desc: "Cross-platform iOS and Android apps with native feel and smooth animations. Built for performance and user engagement.",
-    iconName: "Smartphone",
-    color: "#8B5CF6",
-    benefits: ["iOS & Android Support", "Smooth Animations", "Offline First", "App Store Setup"],
-    useCases: ["Startup MVPs", "E-Commerce Apps", "On-Demand Services", "Social Platforms"]
   },
   {
     id: "ui-ux",

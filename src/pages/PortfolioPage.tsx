@@ -14,7 +14,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onRouteChange }) =
   const categories = [
     { id: 'all', label: 'All Projects' },
     { id: 'web', label: 'Web Applications' },
-    { id: 'mobile', label: 'Mobile Apps' },
     { id: 'design', label: 'UI/UX Design' },
     { id: 'branding', label: 'Branding & Identity' },
   ];
