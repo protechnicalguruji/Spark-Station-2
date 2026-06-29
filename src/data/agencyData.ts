@@ -1,4 +1,4 @@
-import { FAQItem, ServiceItem, TeamMember } from '../types';
+import { FAQItem, ServiceItem, TeamMember, ProjectItem } from '../types';
 
 export const AGENCY_INFO = {
   name: "SPARK STATION",
@@ -10,6 +10,63 @@ export const AGENCY_INFO = {
   call: "+91 7224935780",
   email: "sparkstation.x@gmail.com"
 };
+
+export const PROJECTS: ProjectItem[] = [
+  {
+    id: 'electronics-shop',
+    title: 'Shrinit Enterprises',
+    category: 'web',
+    desc: 'Comprehensive e-commerce platform for retail electronics, featuring streamlined catalog management and secure checkout.',
+    tags: ['React', 'E-commerce'],
+    liveUrl: 'https://shrinit-enterprisess.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1542332213-9b5a5a81a4b1?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'chiranjivi-clinic',
+    title: 'Chiranjivi Clinic',
+    category: 'web',
+    desc: 'Patient-centric medical service portal facilitating seamless appointment scheduling and digital health record management.',
+    tags: ['React', 'Healthcare'],
+    liveUrl: 'https://chiranjeevi-clinic.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'jhansi-empire',
+    title: 'Jhansi Empire',
+    category: 'web',
+    desc: 'Professional real estate and housing society management portal showcasing residential property listings.',
+    tags: ['Real Estate', 'Management'],
+    liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'advance-property',
+    title: 'Advance Property Construction',
+    category: 'web',
+    desc: 'Modern construction company website featuring project portfolios and service capabilities for commercial and residential developments.',
+    tags: ['Construction', 'Portfolio'],
+    liveUrl: 'https://advance-property-mbl.caffeine.xyz/',
+    image: 'https://images.unsplash.com/photo-1503387762-592dfe58ef4a?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'shayona-space',
+    title: 'Shayona Space',
+    category: 'web',
+    desc: 'High-end real estate property showcase platform focused on architectural aesthetics and luxury living spaces.',
+    tags: ['Real Estate', 'Luxury'],
+    liveUrl: 'https://shayona-space-1.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'futura-groups',
+    title: 'Futura Groups',
+    category: 'web',
+    desc: 'Strategic real estate development portal designed for high-volume property listings and investor engagement.',
+    tags: ['Real Estate', 'Investment'],
+    liveUrl: 'https://futura-groups.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&auto=format&fit=crop&q=80'
+  }
+];
 
 export const TRUSTED_BADGES = [
   "TechStartup Co.",
