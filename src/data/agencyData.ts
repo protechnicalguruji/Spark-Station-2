@@ -209,11 +209,11 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "seo",
     title: "SEO & Performance",
-    desc: "Technical SEO audits, core web vitals optimization, structured data, and speed boosting to rank higher on search engines.",
+    desc: "Technical SEO audits, core web vitals optimization, structured data, and comprehensive organic search campaigns to help your business dominate search rankings.",
     iconName: "Search",
     color: "#A855F7",
-    benefits: ["90+ Lighthouse Score", "Keyword Strategy", "On-Page SEO", "Schema Markup"],
-    useCases: ["Organic Growth", "Blog Networks", "Local Businesses", "High Traffic Sites"]
+    benefits: ["60 Target Keywords", "Complete SEO Management", "AI & Voice Optimization", "12 Blog Articles / Mo"],
+    useCases: ["Organic Growth", "National & Local Brand SEO", "High Competition Niches", "E-Commerce SEO"]
   },
   {
     id: "consultancy",
@@ -305,3 +305,28 @@ export const TEAM: TeamMember[] = [
     avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=80"
   }
 ];
+
+export const SEO_PLAN = {
+  title: "Premium Enterprise SEO Plan",
+  subtitle: "Full-Scale SEO Campaign & Performance Suite",
+  desc: "A highly sophisticated search engine dominance campaign. Designed for companies looking to establish search authority, outrank competitors, leverage voice/AI search, and drive highly qualified inbound leads.",
+  features: [
+    { name: "60 Target Keywords", category: "Strategy & Core" },
+    { name: "Complete SEO Management", category: "Strategy & Core" },
+    { name: "Advanced Technical SEO", category: "Technical & Audits" },
+    { name: "Local SEO Integration", category: "Technical & Audits" },
+    { name: "National SEO Strategy", category: "Strategy & Core" },
+    { name: "AI Search Optimization (GEO)", category: "Advanced Optimization" },
+    { name: "Voice Search Optimization", category: "Advanced Optimization" },
+    { name: "Rich Snippet Optimization", category: "Advanced Optimization" },
+    { name: "E-E-A-T Optimization", category: "Advanced Optimization" },
+    { name: "12 Premium SEO Blog Articles", category: "Content & Authority" },
+    { name: "20 Premium Quality Backlinks", category: "Content & Authority" },
+    { name: "Conversion Rate Optimization (CRO) Suggestions", category: "Technical & Audits" },
+    { name: "Monthly Competitor Intelligence Report", category: "Reporting & Support" },
+    { name: "Monthly Video Performance Report", category: "Reporting & Support" },
+    { name: "Priority 24/7 Support", category: "Reporting & Support" },
+    { name: "Dedicated SEO Consultant", category: "Reporting & Support" }
+  ]
+};
+

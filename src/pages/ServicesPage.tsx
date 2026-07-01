@@ -1,6 +1,6 @@
 import React from 'react';
-import { CodeXml, Check, ArrowRight, MessageCircle, HelpCircle } from 'lucide-react';
-import { SERVICES, AGENCY_INFO } from '../data/agencyData';
+import { CodeXml, Check, ArrowRight, MessageCircle, HelpCircle, Search } from 'lucide-react';
+import { SERVICES, AGENCY_INFO, SEO_PLAN } from '../data/agencyData';
 import { PageRoute } from '../types';
 import { Icon } from '../components/Icon';
 import { CTASection } from '../components/CTASection';
@@ -123,6 +123,135 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onRouteChange }) => 
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Premium SEO Growth Suite Section */}
+      <section className="max-w-6xl mx-auto px-6 mb-24 relative z-10 animate-fadeIn">
+        <div className="text-center mb-16">
+          <span className="section-label mb-6">
+            <Search size={14} className="text-[#A855F7]" />
+            <span>Premium SEO Campaign</span>
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white mb-6">
+            The <span className="text-[#A855F7]">Premium Enterprise</span> SEO Plan
+          </h2>
+          <p className="text-lg text-[#8b949e] max-w-3xl mx-auto leading-relaxed">
+            {SEO_PLAN.desc}
+          </p>
+        </div>
+
+        <div className="ss-card p-8 sm:p-12 relative overflow-hidden border-[#A855F7]/30"
+             style={{
+               background: 'linear-gradient(150deg, rgba(22,27,34,1) 0%, rgba(13,17,23,0.9) 100%)',
+             }}>
+          {/* Subtle glowing decorative gradient */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#A855F7]/10 rounded-full filter blur-[80px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-60 h-60 bg-[#58A6FF]/5 rounded-full filter blur-[60px] pointer-events-none" />
+
+          <div className="relative z-10">
+            {/* Header / Summary Badge */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 mb-10 border-b border-[#30363d]/80">
+              <div>
+                <h3 className="text-2xl font-display font-bold text-white mb-2">
+                  {SEO_PLAN.subtitle}
+                </h3>
+                <p className="text-sm text-[#8b949e]">
+                  Everything you need for ranking #1 and outclassing competition, consolidated in a single elite package.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <span className="text-xs font-mono px-4 py-2 rounded-xl bg-[#A855F7]/10 text-[#A855F7] border border-[#A855F7]/20 font-bold uppercase tracking-wider font-semibold">
+                  Complete Growth Package
+                </span>
+                <button
+                  onClick={() => {
+                    onRouteChange('contact');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="btn-primary !bg-[#A855F7] hover:!bg-[#A855F7]/90 !border-[#A855F7]/50 shadow-lg shadow-[#A855F7]/20 !py-3 !px-6 text-sm"
+                >
+                  <span>Request Custom Quote</span>
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+            </div>
+
+            {/* Structured Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Category 1: Strategy & Core */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-display font-bold text-[#A855F7] uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-[#30363d]/50">
+                  <div className="w-2 h-2 rounded-full bg-[#A855F7]" />
+                  <span>Strategy & Core</span>
+                </h4>
+                <ul className="space-y-3">
+                  {SEO_PLAN.features.filter(f => f.category === "Strategy & Core").map((f, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#c9d1d9] group/item">
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-[#A855F7]/10 text-[#A855F7] mt-0.5 border border-[#A855F7]/20">
+                        <Check size={12} />
+                      </div>
+                      <span className="leading-tight group-hover/item:text-white transition-colors">{f.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Category 2: Technical & Audits */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-display font-bold text-[#58A6FF] uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-[#30363d]/50">
+                  <div className="w-2 h-2 rounded-full bg-[#58A6FF]" />
+                  <span>Technical & Audits</span>
+                </h4>
+                <ul className="space-y-3">
+                  {SEO_PLAN.features.filter(f => f.category === "Technical & Audits").map((f, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#c9d1d9] group/item">
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-[#58A6FF]/10 text-[#58A6FF] mt-0.5 border border-[#58A6FF]/20">
+                        <Check size={12} />
+                      </div>
+                      <span className="leading-tight group-hover/item:text-white transition-colors">{f.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Category 3: Content & Optimization */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-display font-bold text-[#F778BA] uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-[#30363d]/50">
+                  <div className="w-2 h-2 rounded-full bg-[#F778BA]" />
+                  <span>Content & Authority</span>
+                </h4>
+                <ul className="space-y-3">
+                  {SEO_PLAN.features.filter(f => ["Content & Authority", "Advanced Optimization"].includes(f.category)).map((f, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#c9d1d9] group/item">
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-[#F778BA]/10 text-[#F778BA] mt-0.5 border border-[#F778BA]/20">
+                        <Check size={12} />
+                      </div>
+                      <span className="leading-tight group-hover/item:text-white transition-colors">{f.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Category 4: Reports & Support */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-display font-bold text-[#34D399] uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-[#30363d]/50">
+                  <div className="w-2 h-2 rounded-full bg-[#34D399]" />
+                  <span>Advisory & Support</span>
+                </h4>
+                <ul className="space-y-3">
+                  {SEO_PLAN.features.filter(f => f.category === "Reporting & Support").map((f, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#c9d1d9] group/item">
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-[#34D399]/10 text-[#34D399] mt-0.5 border border-[#34D399]/20">
+                        <Check size={12} />
+                      </div>
+                      <span className="leading-tight group-hover/item:text-white transition-colors">{f.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
