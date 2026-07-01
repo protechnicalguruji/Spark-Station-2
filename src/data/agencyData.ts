@@ -36,7 +36,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'web',
     desc: 'Professional real estate and housing society management portal showcasing residential property listings.',
     tags: ['Real Estate', 'Management'],
-    liveUrl: '#',
+    liveUrl: 'https://jhansi-empire-frontend.vercel.app/',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80'
   },
   {
@@ -45,7 +45,7 @@ export const PROJECTS: ProjectItem[] = [
     category: 'web',
     desc: 'Modern construction company website featuring project portfolios and service capabilities for commercial and residential developments.',
     tags: ['Construction', 'Portfolio'],
-    liveUrl: 'https://advance-property-mbl.caffeine.xyz/',
+    liveUrl: 'https://advance-property-frontend.vercel.app/',
     image: 'https://images.unsplash.com/photo-1503387762-592dfe58ef4a?w=800&auto=format&fit=crop&q=80'
   },
   {
@@ -63,8 +63,53 @@ export const PROJECTS: ProjectItem[] = [
     category: 'web',
     desc: 'Strategic real estate development portal designed for high-volume property listings and investor engagement.',
     tags: ['Real Estate', 'Investment'],
-    liveUrl: 'https://futura-groups.vercel.app/',
+    liveUrl: 'https://futura-groups-0.vercel.app/',
     image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'pavitra-mobiles',
+    title: 'Pavitra Mobiles',
+    category: 'web',
+    desc: 'Mobile phone retailer portal showcasing latest gadgets and accessories.',
+    tags: ['Retail', 'Mobile'],
+    liveUrl: 'https://pavitra-mobile.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'happy-tooth',
+    title: 'Happy Tooth',
+    category: 'web',
+    desc: 'Dental clinic appointment and services portal for comprehensive dental care.',
+    tags: ['Healthcare', 'Dental'],
+    liveUrl: 'https://happy-tooth-frontend.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'adarsh-gupta',
+    title: 'Adarsh Gupta CA',
+    category: 'web',
+    desc: 'Professional Chartered Accountant portal providing financial services and advisory.',
+    tags: ['Finance', 'Professional'],
+    liveUrl: 'https://gupta-adarsh-co.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'real-estate',
+    title: 'Real Estate',
+    category: 'web',
+    desc: 'Property listing and management platform for commercial and residential real estate.',
+    tags: ['Real Estate'],
+    liveUrl: 'https://real-estate-livid-psi.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80'
+  },
+  {
+    id: 'abati',
+    title: 'Abati',
+    category: 'web',
+    desc: 'Real estate development and property showcase for modern living.',
+    tags: ['Real Estate'],
+    liveUrl: 'https://abati-website.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80'
   }
 ];
 
@@ -188,7 +233,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     q: "How long does a typical project take?",
-    a: "Timelines vary by project complexity. A landing page might take 1-2 weeks, while a full web app can take 4-12 weeks. We'll give you an exact estimate during consultation."
+    a: "Timelines vary by project complexity. A landing page might take 1-2 days, while a full web app can take 4-5days or maximum 1 week . We'll give you an exact estimate during consultation."
   },
   {
     q: "Do you work with startups?",

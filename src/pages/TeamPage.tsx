@@ -120,13 +120,13 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
           <p className="text-base text-[#8b949e] max-w-xl mx-auto mb-8">
             We're always looking for talented developers, UI/UX craftspeople, and client strategists passionate about building high-standard digital products.
           </p>
-          <a
-            href={`mailto:${AGENCY_INFO.email}?subject=Career%20Application%20-%20Spark%20Station`}
+          <button
+            onClick={() => onRouteChange('contact')}
             className="btn-secondary !py-3.5 !px-8"
           >
-            <span>Send Portfolio to {AGENCY_INFO.email}</span>
+            <span>Inquire About Joining the Team</span>
             <ArrowRight size={16} />
-          </a>
+          </button>
         </div>
       </section>
 
