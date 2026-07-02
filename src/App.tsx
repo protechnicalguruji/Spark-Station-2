@@ -42,7 +42,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col bg-[#0d1117] text-[#c9d1d9] selection:bg-[#58A6FF]/30 selection:text-white">
       <Navbar activeRoute={activeRoute} onRouteChange={setActiveRoute} />
       
-      <main className="flex-1">
+      <main className="flex-1 pt-24 md:pt-28">
         {renderPage()}
       </main>
 

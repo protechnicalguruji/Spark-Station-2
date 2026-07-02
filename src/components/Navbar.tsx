@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Zap, MessageCircle, Menu, X } from 'lucide-react';
 import { PageRoute } from '../types';
 import { AGENCY_INFO } from '../data/agencyData';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   activeRoute: PageRoute;
@@ -10,6 +11,19 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks: { label: string; route: PageRoute }[] = [
     { label: 'Home', route: 'home' },
@@ -26,24 +40,22 @@ export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) =>
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#0d1117]/80 border-b border-[#30363d]/80">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header
+      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out backdrop-blur-md border ${
+        scrolled
+          ? 'top-2.5 w-[calc(100%-1.5rem)] max-w-6xl rounded-2xl bg-[#0d1117]/90 border-[#58A6FF]/20 shadow-2xl shadow-black/80 scale-[0.98]'
+          : 'top-4 w-[calc(100%-2rem)] max-w-7xl rounded-3xl bg-[#0d1117]/75 border-[#30363d]/80 shadow-lg shadow-black/40'
+      }`}
+    >
+      <div className={`w-full max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${
+        scrolled ? 'h-16' : 'h-20'
+      }`}>
         {/* Logo */}
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-2.5 text-left focus:outline-none group cursor-pointer"
+          className="flex items-center text-left focus:outline-none group cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#58A6FF] to-[#8B5CF6] flex items-center justify-center text-white shadow-lg shadow-[#58A6FF]/20 group-hover:scale-105 transition-transform">
-            <Zap size={22} className="fill-current" />
-          </div>
-          <div>
-            <span className="font-display font-bold text-lg tracking-wider text-white block leading-none">
-              {AGENCY_INFO.name}
-            </span>
-            <span className="text-[10px] uppercase tracking-widest text-[#58A6FF] font-semibold mt-1 block">
-              Agency
-            </span>
-          </div>
+          <Logo size={40} showText={true} />
         </button>
 
         {/* Desktop Nav */}
@@ -98,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) =>
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#161b22] border-b border-[#30363d] px-6 py-6 animate-fadeIn">
+        <div className="md:hidden px-6 pb-6 animate-fadeIn border-t border-[#30363d]/50 pt-4">
           <nav className="flex flex-col gap-2 mb-6">
             {navLinks.map((link) => (
               <button
@@ -115,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) =>
             ))}
           </nav>
 
-          <div className="flex flex-col gap-3 pt-4 border-t border-[#30363d]">
+          <div className="flex flex-col gap-3 pt-4 border-t border-[#30363d]/50">
             <button
               onClick={() => handleNavClick('contact')}
               className="btn-primary w-full justify-center text-base py-3"

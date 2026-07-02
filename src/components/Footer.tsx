@@ -1,7 +1,8 @@
 import React from 'react';
-import { Zap, MessageCircle, Phone, Mail, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { PageRoute } from '../types';
 import { AGENCY_INFO } from '../data/agencyData';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onRouteChange: (route: PageRoute) => void;
@@ -23,13 +24,8 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#58A6FF] to-[#8B5CF6] flex items-center justify-center text-white shadow-md shadow-[#58A6FF]/20">
-                <Zap size={20} className="fill-current" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-wider text-white">
-                {AGENCY_INFO.name}
-              </span>
+            <div className="mb-5">
+              <Logo size={36} showText={true} />
             </div>
             <p className="text-sm leading-relaxed max-w-sm mb-6 text-[#8b949e]">
               Helping startups, businesses, and creators build, grow, and scale online. From high-converting web apps to brand identities — we deliver measurable digital results.
