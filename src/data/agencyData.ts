@@ -262,7 +262,7 @@ export const TEAM: TeamMember[] = [
     contact: "founder", // custom flag to trigger founder page routing
     skills: ["Web Development", "Cybersecurity", "UI/UX Design", "Linux"],
     color: "#58A6FF",
-    avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80"
+    avatarUrl: "/saksham.jpeg"
   },
   {
     name: "Shashwat Rai",

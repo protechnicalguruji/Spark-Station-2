@@ -39,7 +39,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
       "url": typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency'
     },
     "description": "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.",
-    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
+    "image": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/saksham.jpeg",
     "email": "protechnicalguruji1@gmail.com",
     "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/founder",
     "address": {
@@ -131,7 +131,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-[#58A6FF]/40 shadow-xl relative bg-[#21262d]">
                   <img 
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80" 
+                    src="/saksham.jpeg" 
                     alt="Saksham Pandey Founder of Spark Station" 
                     className="w-full h-full object-cover"
                     loading="lazy"
