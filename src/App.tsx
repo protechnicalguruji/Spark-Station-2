@@ -12,6 +12,7 @@ import { ServicesPage } from './pages/ServicesPage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { TeamPage } from './pages/TeamPage';
 import { ContactPage } from './pages/ContactPage';
+import { FounderPage } from './pages/FounderPage';
 
 export default function App() {
   const [activeRoute, setActiveRoute] = useState<PageRoute>('home');
@@ -31,6 +32,8 @@ export default function App() {
         return <PortfolioPage onRouteChange={setActiveRoute} />;
       case 'team':
         return <TeamPage onRouteChange={setActiveRoute} />;
+      case 'founder':
+        return <FounderPage onRouteChange={setActiveRoute} />;
       case 'contact':
         return <ContactPage />;
       default:

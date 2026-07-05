@@ -256,13 +256,13 @@ export const FAQS: FAQItem[] = [
 export const TEAM: TeamMember[] = [
   {
     name: "Saksham Pandey",
-    role: "Founder & Developer",
-    bio: "Passionate full-stack developer specializing in scalable web architectures and modern UI systems.",
-    experience: "5+ Years",
-    contact: "https://wa.me/919111376314",
-    skills: ["Web Development", "UI/UX Design", "Tech Solutions"],
+    role: "Founder & CEO",
+    bio: "Building high-quality digital products and trusted technology solutions. Specialized in responsive web development and Cybersecurity.",
+    experience: "18+ Months Web / 4+ Years Security",
+    contact: "founder", // custom flag to trigger founder page routing
+    skills: ["Web Development", "Cybersecurity", "UI/UX Design", "Linux"],
     color: "#58A6FF",
-    avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80"
+    avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80"
   },
   {
     name: "Shashwat Rai",
@@ -293,16 +293,6 @@ export const TEAM: TeamMember[] = [
     skills: ["Client Relations", "Project Management", "Consultation"],
     color: "#34D399",
     avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80"
-  },
-  {
-    name: "Puneet Dubey",
-    role: "Client Relations",
-    bio: "Bridges technical deliverables with client expectations and business goals.",
-    experience: "3 Years",
-    contact: null,
-    skills: ["Client Relations", "Account Management", "Strategy"],
-    color: "#FBBF24",
-    avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=80"
   }
 ];
 

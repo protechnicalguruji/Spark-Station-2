@@ -33,7 +33,15 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
           {TEAM.map((member, mIdx) => (
             <div
               key={mIdx}
-              className="ss-card overflow-hidden flex flex-col justify-between group hover:border-[#58A6FF]/40"
+              onClick={() => {
+                if (member.contact === 'founder') {
+                  onRouteChange('founder');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+              className={`ss-card overflow-hidden flex flex-col justify-between group hover:border-[#58A6FF]/40 ${
+                member.contact === 'founder' ? 'cursor-pointer border-[#58A6FF]/30 hover:shadow-[#58A6FF]/10' : ''
+              }`}
             >
               <div>
                 <div className="h-72 overflow-hidden relative bg-[#21262d]">
@@ -84,7 +92,25 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
 
               {/* Action Link */}
               <div className="px-7 pb-7 pt-2">
-                {member.contact ? (
+                {member.contact === 'founder' ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRouteChange('founder');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="w-full py-3 rounded-xl flex items-center justify-center gap-2 text-sm font-semibold transition-all border no-underline cursor-pointer"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(88,166,255,0.15) 0%, rgba(139,92,246,0.15) 100%)',
+                      color: '#58A6FF',
+                      borderColor: 'rgba(88,166,255,0.35)',
+                    }}
+                  >
+                    <Users size={16} />
+                    <span>View Bento Profile</span>
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                ) : member.contact ? (
                   <a
                     href={member.contact}
                     target={member.contact.startsWith('http') ? '_blank' : '_self'}
