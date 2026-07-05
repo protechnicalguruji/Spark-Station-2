@@ -22,7 +22,8 @@ function AppContent() {
 
   // Map pathname to PageRoute
   const getActiveRoute = (pathname: string): PageRoute => {
-    switch (pathname) {
+    const decodedPath = decodeURIComponent(pathname);
+    switch (decodedPath) {
       case '/':
         return 'home';
       case '/services':
@@ -32,6 +33,7 @@ function AppContent() {
       case '/team':
         return 'team';
       case '/founder':
+      case '/Saksham Pandey':
         return 'founder';
       case '/contact':
         return 'contact';
@@ -50,6 +52,8 @@ function AppContent() {
   const handleRouteChange = (route: PageRoute) => {
     if (route === 'home') {
       navigate('/');
+    } else if (route === 'founder') {
+      navigate('/Saksham Pandey');
     } else {
       navigate(`/${route}`);
     }
@@ -66,6 +70,8 @@ function AppContent() {
           <Route path="/portfolio" element={<PortfolioPage onRouteChange={handleRouteChange} />} />
           <Route path="/team" element={<TeamPage onRouteChange={handleRouteChange} />} />
           <Route path="/founder" element={<FounderPage onRouteChange={handleRouteChange} />} />
+          <Route path="/Saksham Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
+          <Route path="/Saksham%20Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* Fallback route */}
           <Route path="*" element={<HomePage onRouteChange={handleRouteChange} />} />

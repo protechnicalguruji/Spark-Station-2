@@ -41,7 +41,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
     "description": "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.",
     "image": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/saksham.jpeg",
     "email": "protechnicalguruji1@gmail.com",
-    "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/founder",
+    "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/Saksham%20Pandey",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Gwalior",
@@ -84,7 +84,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
       <SEO 
         title="Saksham Pandey | Founder of Spark Station | Web Developer"
         description="Official profile of Saksham Pandey, Founder of Spark Station, Web Developer and Cybersecurity Enthusiast."
-        path="/founder"
+        path="/Saksham%20Pandey"
         ogType="profile"
         schemaMarkup={founderSchema}
       />
