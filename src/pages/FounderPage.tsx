@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { 
   ArrowUpRight, 
   MapPin, 
@@ -20,6 +20,7 @@ import {
   Globe
 } from 'lucide-react';
 import { PageRoute } from '../types';
+import { SEO } from '../components/SEO';
 
 interface FounderPageProps {
   onRouteChange: (route: PageRoute) => void;
@@ -27,114 +28,33 @@ interface FounderPageProps {
 
 export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
   
-  // Advanced Dynamic SEO Setup on Mount
-  useEffect(() => {
-    // 1. Dynamic URL Path Simulation / Clean Slug Integration
-    if (window.history.pushState) {
-      window.history.pushState(null, '', '/founder');
-    }
-
-    // 2. Set Page Title (around 55-60 chars)
-    const previousTitle = document.title;
-    document.title = "Saksham Pandey | Founder of Spark Station | Web Developer | Cybersecurity Enthusiast";
-
-    // 3. Set Meta Tags
-    const metaDesc = document.createElement('meta');
-    metaDesc.name = "description";
-    metaDesc.content = "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.";
-    document.head.appendChild(metaDesc);
-
-    // Robots meta tag
-    const metaRobots = document.createElement('meta');
-    metaRobots.name = "robots";
-    metaRobots.content = "index, follow";
-    document.head.appendChild(metaRobots);
-
-    // Canonical link
-    const canonicalLink = document.createElement('link');
-    canonicalLink.rel = "canonical";
-    canonicalLink.href = window.location.origin + "/founder";
-    document.head.appendChild(canonicalLink);
-
-    // Open Graph Tags
-    const ogTitle = document.createElement('meta');
-    ogTitle.setAttribute('property', 'og:title');
-    ogTitle.content = "Saksham Pandey | Founder of Spark Station | Web Developer | Cybersecurity Enthusiast";
-    document.head.appendChild(ogTitle);
-
-    const ogDesc = document.createElement('meta');
-    ogDesc.setAttribute('property', 'og:description');
-    ogDesc.content = "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.";
-    document.head.appendChild(ogDesc);
-
-    const ogType = document.createElement('meta');
-    ogType.setAttribute('property', 'og:type');
-    ogType.content = "profile";
-    document.head.appendChild(ogType);
-
-    const ogUrl = document.createElement('meta');
-    ogUrl.setAttribute('property', 'og:url');
-    ogUrl.content = window.location.origin + "/founder";
-    document.head.appendChild(ogUrl);
-
-    const ogImage = document.createElement('meta');
-    ogImage.setAttribute('property', 'og:image');
-    ogImage.content = "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&auto=format&fit=crop&q=80";
-    document.head.appendChild(ogImage);
-
-    // Twitter Card Tags
-    const twitterCard = document.createElement('meta');
-    twitterCard.name = "twitter:card";
-    twitterCard.content = "summary_large_image";
-    document.head.appendChild(twitterCard);
-
-    // 4. Inject JSON-LD Person Schema Structured Data
-    const schemaScript = document.createElement('script');
-    schemaScript.type = "application/ld+json";
-    schemaScript.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Saksham Pandey",
-      "jobTitle": "Founder & CEO",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Spark Station",
-        "url": window.location.origin
-      },
-      "description": "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.",
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
-      "email": "protechnicalguruji1@gmail.com",
-      "url": window.location.origin + "/founder",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gwalior",
-        "addressRegion": "Madhya Pradesh",
-        "addressCountry": "India"
-      },
-      "sameAs": [
-        "https://www.linkedin.com",
-        "https://www.instagram.com",
-        "https://twitter.com",
-        "https://www.snapchat.com"
-      ]
-    });
-    document.head.appendChild(schemaScript);
-
-    // Cleanup on unmount
-    return () => {
-      document.title = previousTitle;
-      document.head.removeChild(metaDesc);
-      document.head.removeChild(metaRobots);
-      document.head.removeChild(canonicalLink);
-      document.head.removeChild(ogTitle);
-      document.head.removeChild(ogDesc);
-      document.head.removeChild(ogType);
-      document.head.removeChild(ogUrl);
-      document.head.removeChild(ogImage);
-      document.head.removeChild(twitterCard);
-      document.head.removeChild(schemaScript);
-    };
-  }, []);
+  const founderSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saksham Pandey",
+    "jobTitle": "Founder & CEO",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Spark Station",
+      "url": typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency'
+    },
+    "description": "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
+    "email": "protechnicalguruji1@gmail.com",
+    "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/founder",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gwalior",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://www.linkedin.com",
+      "https://www.instagram.com",
+      "https://twitter.com",
+      "https://www.snapchat.com"
+    ]
+  };
 
   const skillsList = [
     { name: "HTML", category: "frontend" },
@@ -161,6 +81,13 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
 
   return (
     <div className="relative min-h-screen py-12 md:py-20 overflow-hidden">
+      <SEO 
+        title="Saksham Pandey | Founder of Spark Station | Web Developer"
+        description="Official profile of Saksham Pandey, Founder of Spark Station, Web Developer and Cybersecurity Enthusiast."
+        path="/founder"
+        ogType="profile"
+        schemaMarkup={founderSchema}
+      />
       {/* Decorative premium ambient glow backgrounds matching site branding */}
       <div className="absolute top-[-100px] left-1/4 w-[500px] h-[500px] bg-[#58A6FF]/5 rounded-full filter blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[200px] right-1/4 w-[600px] h-[600px] bg-[#8B5CF6]/5 rounded-full filter blur-[120px] pointer-events-none" />

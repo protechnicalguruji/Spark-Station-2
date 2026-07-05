@@ -4,6 +4,7 @@ import { SERVICES, AGENCY_INFO, SEO_PLAN } from '../data/agencyData';
 import { PageRoute } from '../types';
 import { Icon } from '../components/Icon';
 import { CTASection } from '../components/CTASection';
+import { SEO } from '../components/SEO';
 
 interface ServicesPageProps {
   onRouteChange: (route: PageRoute) => void;
@@ -12,6 +13,11 @@ interface ServicesPageProps {
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onRouteChange }) => {
   return (
     <div className="relative min-h-screen py-20">
+      <SEO 
+        title="Website Development Services | Spark Station"
+        description="Explore our custom website development, UI/UX design, and digital agency services tailored to scale your business."
+        path="/services"
+      />
       <div className="ambient-glow" />
 
       {/* Header */}

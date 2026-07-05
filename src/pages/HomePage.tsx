@@ -5,14 +5,41 @@ import { PageRoute } from '../types';
 import { Icon } from '../components/Icon';
 import { CTASection } from '../components/CTASection';
 import { FAQSection } from '../components/FAQSection';
+import { SEO } from '../components/SEO';
 
 interface HomePageProps {
   onRouteChange: (route: PageRoute) => void;
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spark Station",
+    "url": typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency',
+    "logo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
+    "description": "Spark Station builds premium websites, landing pages and modern digital experiences.",
+    "sameAs": [
+      "https://www.linkedin.com",
+      "https://twitter.com",
+      "https://www.instagram.com"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gwalior",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "India"
+    }
+  };
+
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <SEO 
+        title="Spark Station | Premium Website Development Agency"
+        description="Spark Station builds premium websites, landing pages and modern digital experiences."
+        path="/"
+        schemaMarkup={orgSchema}
+      />
       {/* Ambient Glow */}
       <div className="ambient-glow" />
 

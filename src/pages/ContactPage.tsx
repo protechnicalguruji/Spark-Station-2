@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MessageCircle, Send, CheckCircle2, ArrowUpRight, HelpCircle, Sparkles } from 'lucide-react';
 import { AGENCY_INFO, SERVICES } from '../data/agencyData';
+import { SEO } from '../components/SEO';
 
 export const ContactPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -31,6 +32,11 @@ export const ContactPage: React.FC = () => {
 
   return (
     <div className="relative min-h-screen py-20">
+      <SEO 
+        title="Contact Spark Station"
+        description="Get in touch with Spark Station. Let's discuss your next project, custom web app, or tech partnership."
+        path="/contact"
+      />
       <div className="ambient-glow" />
 
       {/* Header */}

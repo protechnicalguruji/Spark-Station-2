@@ -3,6 +3,7 @@ import { Sparkles, MessageCircle, ArrowRight, ExternalLink } from 'lucide-react'
 import { PageRoute } from '../types';
 import { AGENCY_INFO, PROJECTS } from '../data/agencyData';
 import { CTASection } from '../components/CTASection';
+import { SEO } from '../components/SEO';
 
 interface PortfolioPageProps {
   onRouteChange: (route: PageRoute) => void;
@@ -22,6 +23,11 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onRouteChange }) =
 
   return (
     <div className="relative min-h-screen py-20">
+      <SEO 
+        title="Portfolio | Spark Station"
+        description="Our digital masterpieces. Check out the hand-crafted web applications, brand identities, and tech solutions we've delivered."
+        path="/portfolio"
+      />
       <div className="ambient-glow" />
 
       {/* Header */}

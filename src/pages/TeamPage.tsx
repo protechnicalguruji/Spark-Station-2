@@ -3,6 +3,7 @@ import { Users, ExternalLink, Phone, MessageCircle, ArrowRight } from 'lucide-re
 import { TEAM, AGENCY_INFO } from '../data/agencyData';
 import { PageRoute } from '../types';
 import { CTASection } from '../components/CTASection';
+import { SEO } from '../components/SEO';
 
 interface TeamPageProps {
   onRouteChange: (route: PageRoute) => void;
@@ -11,6 +12,11 @@ interface TeamPageProps {
 export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
   return (
     <div className="relative min-h-screen py-20">
+      <SEO 
+        title="Meet the Team | Spark Station"
+        description="Get to know the passionate minds building digital solutions, websites, and custom business software at Spark Station."
+        path="/team"
+      />
       <div className="ambient-glow" />
 
       {/* Header */}
