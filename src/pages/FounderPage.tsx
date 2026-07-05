@@ -389,119 +389,114 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
             </div>
           </div>
 
-          {/* CARD 8: GALLERY CARD (lg:col-span-1, lg:row-span-1) */}
-          <div 
-            id="founder-gallery-card"
-            className="lg:col-span-1 ss-card p-4 flex flex-col justify-between border-[#30363d]/80 overflow-hidden relative group"
-          >
-            <div className="grid grid-cols-2 gap-2 h-full min-h-[160px]">
-              <div className="rounded-lg overflow-hidden bg-[#21262d] relative group/img">
-                <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&auto=format&fit=crop&q=80" 
-                  alt="Saksham Pandey Cybersecurity Web Developer workstation" 
-                  className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden bg-[#21262d] relative group/img col-span-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&auto=format&fit=crop&q=80" 
-                  alt="Saksham Pandey programming development setup" 
-                  className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden bg-[#21262d] relative group/img col-span-2">
-                <img 
-                  src="https://images.unsplash.com/photo-1581291518655-9523c932dedf?w=400&auto=format&fit=crop&q=80" 
-                  alt="Modern clean digital designs" 
-                  className="w-full h-full object-cover group-hover/img:scale-115 transition-transform duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2.5">
-                  <span className="text-[10px] font-mono text-white/90">Workstations & Lab</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CARD 9: CONTACT LINKS CARD (lg:col-span-1, lg:row-span-1) */}
+          {/* CARD 9: CONTACT LINKS CARD (lg:col-span-2, lg:row-span-1) */}
           <div 
             id="founder-contact-card"
-            className="lg:col-span-1 ss-card p-6 flex flex-col justify-between border-[#30363d]/80 hover:border-[#58A6FF]/40"
+            className="lg:col-span-2 ss-card p-6 flex flex-col justify-between border-[#30363d]/80 hover:border-[#58A6FF]/40 bg-gradient-to-br from-[#161b22] to-[#0d1117] transition-all duration-300 relative group"
           >
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xs font-mono uppercase tracking-widest text-[#8b949e]">Contact</h2>
-              <Globe size={15} className="text-[#58A6FF]" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#58A6FF]/5 rounded-full filter blur-[35px] pointer-events-none" />
+            
+            <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#30363d]/40">
+              <div className="flex items-center gap-2">
+                <Globe size={16} className="text-[#58A6FF]" />
+                <h2 className="text-xs font-mono uppercase tracking-widest text-[#8b949e]">Connect with me</h2>
+              </div>
+              <span className="text-[10px] font-mono text-[#34D399] px-2 py-0.5 rounded-full bg-[#34D399]/10 border border-[#34D399]/20">
+                ● Available
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-auto">
+              <div>
+                <p className="text-sm text-[#c9d1d9] leading-relaxed">
+                  Have a question, a project idea, or a security query? Let's build a secure and premium digital solution together.
+                </p>
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center gap-2.5 text-xs text-[#8b949e]">
+                    <Mail size={13} className="text-[#58A6FF]" />
+                    <a href="mailto:protechnicalguruji1@gmail.com" className="hover:text-white hover:underline transition-colors">
+                      protechnicalguruji1@gmail.com
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-[#8b949e]">
+                    <MapPin size={13} className="text-[#f778ba]" />
+                    <span>Gwalior, Madhya Pradesh, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2.5 md:justify-end">
+                {/* Email Button */}
+                <a 
+                  href="mailto:protechnicalguruji1@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] text-xs font-medium text-[#c9d1d9] hover:text-[#58A6FF] transition-all duration-300 hover:-translate-y-1"
+                  title="Email Saksham"
+                  aria-label="Email Saksham"
+                >
+                  <Mail size={15} />
+                  <span>Email</span>
+                </a>
+
+                {/* LinkedIn Button */}
+                <a 
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#0A66C2]/15 border border-[#30363d] hover:border-[#0A66C2]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#0A66C2] transition-all duration-300 hover:-translate-y-1"
+                  title="LinkedIn"
+                  aria-label="LinkedIn profile"
+                >
+                  <Linkedin size={15} />
+                  <span>LinkedIn</span>
+                </a>
+
+                {/* Instagram Button */}
+                <a 
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#E1306C]/15 border border-[#30363d] hover:border-[#E1306C]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#E1306C] transition-all duration-300 hover:-translate-y-1"
+                  title="Instagram"
+                  aria-label="Instagram profile"
+                >
+                  <Instagram size={15} />
+                  <span>Instagram</span>
+                </a>
+
+                {/* X / Twitter Button */}
+                <a 
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-white/10 border border-[#30363d] hover:border-white/30 text-xs font-medium text-[#c9d1d9] hover:text-white transition-all duration-300 hover:-translate-y-1"
+                  title="X (Twitter)"
+                  aria-label="Twitter profile"
+                >
+                  <Twitter size={15} />
+                  <span>Twitter</span>
+                </a>
+
+                {/* Snapchat Button */}
+                <a 
+                  href="https://www.snapchat.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#FFFC00]/15 border border-[#30363d] hover:border-[#FFFC00]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#FFFC00] transition-all duration-300 hover:-translate-y-1"
+                  title="Snapchat"
+                  aria-label="Snapchat profile"
+                >
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2c-3.9 0-7 3.1-7 7a1 1 0 00.5.9c.7.4 1.2.9 1.5 1.6l.4.9c.1.3 0 .7-.3.9-.7.4-1.1.9-1.1 1.7 0 .6.4 1.1 1 1.3l.5.2c.2.1.3.4.2.6a4.2 4.2 0 00-.5 2.1c0 2 2.2 3.8 5.3 3.8 3 0 5.3-1.8 5.3-3.8 0-.8-.1-1.5-.5-2.1l-.1-.5c0-.2.1-.5.3-.6l.5-.2c.6-.2 1-.7 1-1.3 0-.8-.4-1.3-1.1-1.7a.8.8 0 01-.3-.9c.1-.3.3-.6.5-.9.3-.7.8-1.2 1.5-1.6a1 1 0 00.4-.9c0-3.9-3.1-7-7-7z" />
+                  </svg>
+                  <span>Snapchat</span>
+                </a>
+              </div>
             </div>
             
-            <div className="grid grid-cols-5 gap-3">
-              {/* Email */}
-              <a 
-                href="mailto:protechnicalguruji1@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] flex items-center justify-center text-[#c9d1d9] hover:text-[#58A6FF] transition-all hover:-translate-y-1"
-                title="Email Saksham Pandey"
-                aria-label="Email Saksham Pandey"
-              >
-                <Mail size={18} />
-              </a>
-
-              {/* LinkedIn */}
-              <a 
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-[#0A66C2]/15 border border-[#30363d] hover:border-[#0A66C2]/40 flex items-center justify-center text-[#c9d1d9] hover:text-[#0A66C2] transition-all hover:-translate-y-1"
-                title="LinkedIn"
-                aria-label="LinkedIn profile"
-              >
-                <Linkedin size={18} />
-              </a>
-
-              {/* Instagram */}
-              <a 
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-[#E1306C]/15 border border-[#30363d] hover:border-[#E1306C]/40 flex items-center justify-center text-[#c9d1d9] hover:text-[#E1306C] transition-all hover:-translate-y-1"
-                title="Instagram"
-                aria-label="Instagram profile"
-              >
-                <Instagram size={18} />
-              </a>
-
-              {/* X / Twitter */}
-              <a 
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-white/10 border border-[#30363d] hover:border-white/30 flex items-center justify-center text-[#c9d1d9] hover:text-white transition-all hover:-translate-y-1"
-                title="X (Twitter)"
-                aria-label="Twitter profile"
-              >
-                <Twitter size={18} />
-              </a>
-
-              {/* Snapchat Custom Inline Icon */}
-              <a 
-                href="https://www.snapchat.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-[#FFFC00]/15 border border-[#30363d] hover:border-[#FFFC00]/40 flex items-center justify-center text-[#c9d1d9] hover:text-[#FFFC00] transition-all hover:-translate-y-1"
-                title="Snapchat"
-                aria-label="Snapchat profile"
-              >
-                {/* Snapchat Ghost Custom SVG */}
-                <svg viewBox="0 0 24 24" className="w-4.5 h-4.5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2c-3.9 0-7 3.1-7 7a1 1 0 00.5.9c.7.4 1.2.9 1.5 1.6l.4.9c.1.3 0 .7-.3.9-.7.4-1.1.9-1.1 1.7 0 .6.4 1.1 1 1.3l.5.2c.2.1.3.4.2.6a4.2 4.2 0 00-.5 2.1c0 2 2.2 3.8 5.3 3.8 3 0 5.3-1.8 5.3-3.8 0-.8-.1-1.5-.5-2.1l-.1-.5c0-.2.1-.5.3-.6l.5-.2c.6-.2 1-.7 1-1.3 0-.8-.4-1.3-1.1-1.7a.8.8 0 01-.3-.9c.1-.3.3-.6.5-.9.3-.7.8-1.2 1.5-1.6a1 1 0 00.4-.9c0-3.9-3.1-7-7-7z" />
-                </svg>
-              </a>
-            </div>
-            
-            <div className="text-xs text-[#8b949e] font-mono leading-tight">
-              Direct connection available 24/7.
+            <div className="text-[10px] text-[#8b949e] font-mono leading-none pt-4 mt-4 border-t border-[#30363d]/30">
+              Response time within 24 hours guaranteed.
             </div>
           </div>
 

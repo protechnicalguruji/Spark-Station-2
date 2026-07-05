@@ -272,7 +272,7 @@ export const TEAM: TeamMember[] = [
     contact: null,
     skills: ["Financial Planning", "Budgeting", "Pricing Strategy"],
     color: "#8B5CF6",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80"
+    avatarUrl: "/shashwat.jpeg"
   },
   {
     name: "Niket",
@@ -282,7 +282,7 @@ export const TEAM: TeamMember[] = [
     contact: null,
     skills: ["Marketing Strategy", "Content Creation", "Lead Generation"],
     color: "#F778BA",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80"
+    avatarUrl: "/niket.jpeg"
   },
   {
     name: "Manas",
@@ -292,7 +292,7 @@ export const TEAM: TeamMember[] = [
     contact: "tel:+917224935780",
     skills: ["Client Relations", "Project Management", "Consultation"],
     color: "#34D399",
-    avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80"
+    avatarUrl: "/manas.jpeg"
   }
 ];
 
