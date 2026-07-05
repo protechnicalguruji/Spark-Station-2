@@ -34,6 +34,7 @@ function AppContent() {
         return 'team';
       case '/founder':
       case '/Saksham Pandey':
+      case '/saksham-pandey':
         return 'founder';
       case '/contact':
         return 'contact';
@@ -53,7 +54,7 @@ function AppContent() {
     if (route === 'home') {
       navigate('/');
     } else if (route === 'founder') {
-      navigate('/Saksham Pandey');
+      navigate('/saksham-pandey');
     } else {
       navigate(`/${route}`);
     }
@@ -70,6 +71,7 @@ function AppContent() {
           <Route path="/portfolio" element={<PortfolioPage onRouteChange={handleRouteChange} />} />
           <Route path="/team" element={<TeamPage onRouteChange={handleRouteChange} />} />
           <Route path="/founder" element={<FounderPage onRouteChange={handleRouteChange} />} />
+          <Route path="/saksham-pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham%20Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/contact" element={<ContactPage />} />
