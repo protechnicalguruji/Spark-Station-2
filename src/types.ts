@@ -9,6 +9,7 @@ export interface ServiceItem {
 }
 
 export interface TeamMember {
+  slug: string;
   name: string;
   role: string;
   bio: string;
@@ -17,6 +18,19 @@ export interface TeamMember {
   skills: string[];
   color: string;
   avatarUrl: string;
+  tagline?: string;
+  aboutLong?: string;
+  responsibilities?: string[];
+  experienceList?: Array<{ role: string; company: string; period: string; desc: string }>;
+  socials?: {
+    email?: string;
+    linkedin?: string;
+    twitter?: string;
+    instagram?: string;
+    snapchat?: string;
+    github?: string;
+    whatsapp?: string;
+  };
 }
 
 export interface FAQItem {

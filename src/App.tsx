@@ -15,6 +15,7 @@ import { PortfolioPage } from './pages/PortfolioPage';
 import { TeamPage } from './pages/TeamPage';
 import { ContactPage } from './pages/ContactPage';
 import { FounderPage } from './pages/FounderPage';
+import { TeamMemberProfilePage } from './pages/TeamMemberProfilePage';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -23,6 +24,14 @@ function AppContent() {
   // Map pathname to PageRoute
   const getActiveRoute = (pathname: string): PageRoute => {
     const decodedPath = decodeURIComponent(pathname);
+    if (
+      decodedPath === '/shashwat' || 
+      decodedPath === '/niket' || 
+      decodedPath === '/manas' || 
+      decodedPath.startsWith('/team/')
+    ) {
+      return 'team';
+    }
     switch (decodedPath) {
       case '/':
         return 'home';
@@ -74,6 +83,10 @@ function AppContent() {
           <Route path="/saksham-pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham%20Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
+          <Route path="/shashwat" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
+          <Route path="/niket" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
+          <Route path="/manas" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
+          <Route path="/team/:slug" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* Fallback route */}
           <Route path="*" element={<HomePage onRouteChange={handleRouteChange} />} />

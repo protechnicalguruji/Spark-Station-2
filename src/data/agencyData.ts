@@ -255,44 +255,156 @@ export const FAQS: FAQItem[] = [
 
 export const TEAM: TeamMember[] = [
   {
+    slug: "saksham-pandey",
     name: "Saksham Pandey",
     role: "Founder & CEO",
     bio: "Building high-quality digital products and trusted technology solutions. Specialized in responsive web development and Cybersecurity.",
+    tagline: "Security-First Web Developer & Cybersecurity Architect.",
+    aboutLong: "I am Saksham Pandey, Founder of Spark Station. With over 18 months of hands-on experience in modern full-stack web development and more than 4 years of deep involvement in cybersecurity, I specialize in engineering highly performant, accessible, and ultra-secure web applications. I believe that elegant design must be backed by bulletproof code and military-grade security.",
     experience: "18+ Months Web / 4+ Years Security",
     contact: "founder", // custom flag to trigger founder page routing
-    skills: ["Web Development", "Cybersecurity", "UI/UX Design", "Linux"],
+    skills: ["Web Development", "Cybersecurity", "UI/UX Design", "Linux", "React / Vite", "Node.js", "Penetration Testing"],
     color: "#58A6FF",
-    avatarUrl: "/saksham.jpeg"
+    avatarUrl: "/saksham.jpeg",
+    responsibilities: [
+      "Full-Stack Web Development",
+      "Cybersecurity Auditing & Hardening",
+      "Infrastructure Setup & Cloud Deployment",
+      "Technical Architecture & System Design"
+    ],
+    experienceList: [
+      {
+        role: "Founder & CEO",
+        company: "Spark Station",
+        period: "2024 - Present",
+        desc: "Leading a dedicated team of digital specialists to deliver premium-grade web systems, branding, and strategic marketing campaigns."
+      },
+      {
+        role: "Cybersecurity Analyst & Developer",
+        company: "Freelance",
+        period: "2020 - Present",
+        desc: "Performed extensive web application penetration testing, system hardening, and secure custom software engineering."
+      }
+    ],
+    socials: {
+      email: "protechnicalguruji1@gmail.com",
+      linkedin: "https://www.linkedin.com/in/saksham-pandey-002485280/",
+      twitter: "https://x.com/crazy_saksham",
+      instagram: "https://www.instagram.com/sakshampandey.x/",
+      snapchat: "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
+      whatsapp: "https://wa.me/919111376314"
+    }
   },
   {
+    slug: "shashwat",
     name: "Shashwat Rai",
     role: "Finance Manager",
     bio: "Handles pricing strategy, budgeting, and financial planning for projects.",
+    tagline: "Strategic Financial Planner and Pricing Analyst.",
+    aboutLong: "Shashwat Rai manages the financial health and commercial strategy at Spark Station. With 4 years of specialized experience in corporate finance, project budgeting, and transparent pricing structures, he ensures that our clients receive maximum value for their investments. Shashwat aligns project scope with cost-effective engineering practices.",
     experience: "4 Years",
     contact: null,
-    skills: ["Financial Planning", "Budgeting", "Pricing Strategy"],
+    skills: ["Financial Planning", "Budgeting", "Pricing Strategy", "Risk Assessment", "Resource Allocation"],
     color: "#8B5CF6",
-    avatarUrl: "/shashwat.jpeg"
+    avatarUrl: "/shashwat.jpeg",
+    responsibilities: [
+      "Project Budgeting & Resource Allocation",
+      "Financial Strategy & Risk Assessment",
+      "Commercial Operations & Audit Oversight",
+      "Client Contract Invoicing & Strategy"
+    ],
+    experienceList: [
+      {
+        role: "Finance Manager",
+        company: "Spark Station",
+        period: "2024 - Present",
+        desc: "Overseeing company financial health, client estimates, cost analysis, and strategic growth budgeting."
+      },
+      {
+        role: "Financial Analyst",
+        company: "Consulting Group",
+        period: "2022 - 2024",
+        desc: "Created robust financial models and streamlined cost structures for high-performance service teams."
+      }
+    ],
+    socials: {
+      email: "shashwat@sparkstation.agency",
+      linkedin: "https://www.linkedin.com"
+    }
   },
   {
+    slug: "niket",
     name: "Niket",
     role: "Marketing & Content Strategy",
     bio: "Responsible for marketing strategy, content creation, and customer acquisition.",
+    tagline: "Growth Marketer & High-Impact Content Creator.",
+    aboutLong: "Niket leads growth marketing and brand communication at Spark Station. With 3 years of expertise in SEO optimization, search-engine visibility, and content strategy, he designs data-driven campaigns that help businesses reach their perfect audience. He excels at translating technical complexity into highly engaging digital narratives.",
     experience: "3 Years",
     contact: null,
-    skills: ["Marketing Strategy", "Content Creation", "Lead Generation"],
+    skills: ["Marketing Strategy", "Content Creation", "Lead Generation", "SEO Optimization", "Social Media Campaigns"],
     color: "#F778BA",
-    avatarUrl: "/niket.jpeg"
+    avatarUrl: "/niket.jpeg",
+    responsibilities: [
+      "Growth Marketing & Funnel Design",
+      "High-Impact Content Strategy",
+      "Client Outreach & Lead Generation",
+      "SEO Positioning & Performance Tracking"
+    ],
+    experienceList: [
+      {
+        role: "Marketing Lead",
+        company: "Spark Station",
+        period: "2024 - Present",
+        desc: "Formulating scalable customer-acquisition funnels and premium content frameworks for high-growth partners."
+      },
+      {
+        role: "Growth Marketer",
+        company: "Creative Agency",
+        period: "2023 - 2024",
+        desc: "Executed targeted organic traffic campaigns yielding over 150% growth in customer touchpoints."
+      }
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com",
+      instagram: "https://www.instagram.com"
+    }
   },
   {
+    slug: "manas",
     name: "Manas",
     role: "Client Relations",
     bio: "Ensuring smooth communication, project onboarding, and client satisfaction.",
+    tagline: "Dedicated Client Strategist & Project Coordinator.",
+    aboutLong: "Manas is the primary touchpoint for our clients at Spark Station, bridging the gap between technical execution and business requirements. With 3 years of experience in account management and project coordination, Manas facilitates transparent communication, seamless onboarding workflows, and absolute client satisfaction.",
     experience: "3 Years",
     contact: "tel:+917224935780",
-    skills: ["Client Relations", "Project Management", "Consultation"],
+    skills: ["Client Relations", "Project Management", "Consultation", "Conflict Resolution", "Agile Operations"],
     color: "#34D399",
-    avatarUrl: "/manas.jpeg"
+    avatarUrl: "/manas.jpeg",
+    responsibilities: [
+      "Client Onboarding & Project Coordination",
+      "Requirements Elicitation & Scope Alignment",
+      "Quality Assurance & Feedback Loop Facilitation",
+      "Ongoing Project Maintenance Communications"
+    ],
+    experienceList: [
+      {
+        role: "Head of Client Relations",
+        company: "Spark Station",
+        period: "2024 - Present",
+        desc: "Orchestrating smooth multi-stakeholder product delivery pipelines and maintaining 100% client retention rates."
+      },
+      {
+        role: "Account Executive",
+        company: "Tech Solutions",
+        period: "2023 - 2024",
+        desc: "Managed end-to-end communication and success plans for enterprise-tier software clients."
+      }
+    ],
+    socials: {
+      email: "manas@sparkstation.agency",
+      linkedin: "https://www.linkedin.com"
+    }
   }
 ];
 

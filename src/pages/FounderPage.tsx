@@ -429,24 +429,22 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
                 {/* Email Button */}
                 <a 
                   href="mailto:protechnicalguruji1@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] text-xs font-medium text-[#c9d1d9] hover:text-[#58A6FF] transition-all duration-300 hover:-translate-y-1"
-                  title="Email Saksham"
-                  aria-label="Email Saksham"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#58A6FF]/10 border border-[#30363d] hover:border-[#58A6FF]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#58A6FF] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(88,166,255,0.15)] focus:outline-none focus:ring-2 focus:ring-[#58A6FF] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="Email: protechnicalguruji1@gmail.com"
+                  aria-label="Send email to protechnicalguruji1@gmail.com"
                 >
                   <Mail size={15} />
-                  <span>Email</span>
+                  <span className="font-mono">protechnicalguruji1@gmail.com</span>
                 </a>
 
                 {/* LinkedIn Button */}
                 <a 
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/saksham-pandey-002485280/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#0A66C2]/15 border border-[#30363d] hover:border-[#0A66C2]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#0A66C2] transition-all duration-300 hover:-translate-y-1"
-                  title="LinkedIn"
-                  aria-label="LinkedIn profile"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#0A66C2]/15 border border-[#30363d] hover:border-[#0A66C2]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#0A66C2] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(10,102,194,0.15)] focus:outline-none focus:ring-2 focus:ring-[#0A66C2] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="LinkedIn: Saksham Pandey"
+                  aria-label="Open LinkedIn profile"
                 >
                   <Linkedin size={15} />
                   <span>LinkedIn</span>
@@ -454,12 +452,12 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
 
                 {/* Instagram Button */}
                 <a 
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/sakshampandey.x/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#E1306C]/15 border border-[#30363d] hover:border-[#E1306C]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#E1306C] transition-all duration-300 hover:-translate-y-1"
-                  title="Instagram"
-                  aria-label="Instagram profile"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#E1306C]/15 border border-[#30363d] hover:border-[#E1306C]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#E1306C] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(225,48,108,0.15)] focus:outline-none focus:ring-2 focus:ring-[#E1306C] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="Instagram: @sakshampandey.x"
+                  aria-label="Open Instagram profile"
                 >
                   <Instagram size={15} />
                   <span>Instagram</span>
@@ -467,30 +465,45 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
 
                 {/* X / Twitter Button */}
                 <a 
-                  href="https://twitter.com"
+                  href="https://x.com/crazy_saksham"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-white/10 border border-[#30363d] hover:border-white/30 text-xs font-medium text-[#c9d1d9] hover:text-white transition-all duration-300 hover:-translate-y-1"
-                  title="X (Twitter)"
-                  aria-label="Twitter profile"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-white/10 border border-[#30363d] hover:border-white/30 text-xs font-medium text-[#c9d1d9] hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(255,255,255,0.08)] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="X (Twitter): @crazy_saksham"
+                  aria-label="Open X profile"
                 >
                   <Twitter size={15} />
-                  <span>Twitter</span>
+                  <span>X (Twitter)</span>
                 </a>
 
                 {/* Snapchat Button */}
                 <a 
-                  href="https://www.snapchat.com"
+                  href="https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#FFFC00]/15 border border-[#30363d] hover:border-[#FFFC00]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#FFFC00] transition-all duration-300 hover:-translate-y-1"
-                  title="Snapchat"
-                  aria-label="Snapchat profile"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#FFFC00]/15 border border-[#30363d] hover:border-[#FFFC00]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#FFFC00] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(255,252,0,0.15)] focus:outline-none focus:ring-2 focus:ring-[#FFFC00] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="Snapchat: @sakshampande.x"
+                  aria-label="Open Snapchat profile"
                 >
                   <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2c-3.9 0-7 3.1-7 7a1 1 0 00.5.9c.7.4 1.2.9 1.5 1.6l.4.9c.1.3 0 .7-.3.9-.7.4-1.1.9-1.1 1.7 0 .6.4 1.1 1 1.3l.5.2c.2.1.3.4.2.6a4.2 4.2 0 00-.5 2.1c0 2 2.2 3.8 5.3 3.8 3 0 5.3-1.8 5.3-3.8 0-.8-.1-1.5-.5-2.1l-.1-.5c0-.2.1-.5.3-.6l.5-.2c.6-.2 1-.7 1-1.3 0-.8-.4-1.3-1.1-1.7a.8.8 0 01-.3-.9c.1-.3.3-.6.5-.9.3-.7.8-1.2 1.5-1.6a1 1 0 00.4-.9c0-3.9-3.1-7-7-7z" />
                   </svg>
                   <span>Snapchat</span>
+                </a>
+
+                {/* WhatsApp Button */}
+                <a 
+                  href="https://wa.me/919111376314"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#25D366]/15 border border-[#30363d] hover:border-[#25D366]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#25D366] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(37,211,102,0.15)] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
+                  title="WhatsApp: Chat with Saksham"
+                  aria-label="Message Saksham on WhatsApp"
+                >
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current text-[#25D366]" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.763.456 3.486 1.321 5.016l-1.405 5.127 5.244-1.376c1.478.807 3.136 1.233 4.844 1.233 5.524 0 10.004-4.48 10.004-10.004C22.008 6.48 17.528 2 12.004 2zm6.657 13.914c-.274.773-1.394 1.408-1.921 1.488-.475.071-.97.098-1.57-.101-.6-.2-2.583-.984-4.945-3.092-1.96-1.75-3.23-3.915-3.614-4.576-.385-.662-.41-1.127-.122-1.465.15-.175.324-.374.486-.562.162-.187.216-.312.324-.525.108-.212.054-.4-.027-.562-.08-.162-.729-1.757-.999-2.41-.262-.637-.53-.55-.729-.56-.188-.01-.405-.01-.62-.01-.216 0-.568.081-.865 1.135-.297 1.054-1.135 2.62-1.135 2.836 0 .216.189.405.432.568.243.162 2.27 3.457 5.497 4.86.768.334 1.368.533 1.836.685.772.245 1.474.21 2.03.127.62-.092 1.923-.787 2.193-1.545.27-1.546.27-1.405.189-1.545-.081-.14-.3-.216-.62-.379l-2.92-1.432c-.324-.162-.562-.08-.756.162l-.973 1.189c-.189.243-.432.27-.756.108-.324-.162-1.368-.505-2.607-1.614z" />
+                  </svg>
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

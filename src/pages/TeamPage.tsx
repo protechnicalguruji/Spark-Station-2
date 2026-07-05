@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Users, ExternalLink, Phone, MessageCircle, ArrowRight } from 'lucide-react';
 import { TEAM, AGENCY_INFO } from '../data/agencyData';
 import { PageRoute } from '../types';
@@ -10,6 +11,7 @@ interface TeamPageProps {
 }
 
 export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
+  const navigate = useNavigate();
   return (
     <div className="relative min-h-screen py-20">
       <SEO 
@@ -40,14 +42,10 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
             <div
               key={mIdx}
               onClick={() => {
-                if (member.contact === 'founder') {
-                  onRouteChange('founder');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+                navigate(`/${member.slug}`);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className={`ss-card overflow-hidden flex flex-col justify-between group hover:border-[#58A6FF]/40 ${
-                member.contact === 'founder' ? 'cursor-pointer border-[#58A6FF]/30 hover:shadow-[#58A6FF]/10' : ''
-              }`}
+              className="ss-card overflow-hidden flex flex-col justify-between group hover:border-[#58A6FF]/40 cursor-pointer border-[#30363d]/80 hover:shadow-lg hover:shadow-black/20 transition-all duration-300"
             >
               <div>
                 <div className="h-72 overflow-hidden relative bg-[#21262d]">
@@ -98,45 +96,27 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
 
               {/* Action Link */}
               <div className="px-7 pb-7 pt-2">
-                {member.contact === 'founder' ? (
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRouteChange('founder');
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="w-full py-3 rounded-xl flex items-center justify-center gap-2 text-sm font-semibold transition-all border no-underline cursor-pointer"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(88,166,255,0.15) 0%, rgba(139,92,246,0.15) 100%)',
-                      color: '#58A6FF',
-                      borderColor: 'rgba(88,166,255,0.35)',
-                    }}
-                  >
-                    <Users size={16} />
-                    <span>View Bento Profile</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                  </button>
-                ) : member.contact ? (
-                  <a
-                    href={member.contact}
-                    target={member.contact.startsWith('http') ? '_blank' : '_self'}
-                    rel="noreferrer"
-                    className="w-full py-3 rounded-xl flex items-center justify-center gap-2 text-sm font-semibold transition-all border no-underline"
-                    style={{
-                      background: `${member.color}15`,
-                      color: member.color,
-                      borderColor: `${member.color}35`,
-                    }}
-                  >
-                    {member.contact.startsWith('http') ? <MessageCircle size={16} /> : <Phone size={16} />}
-                    <span>Connect with {member.name.split(' ')[0]}</span>
-                    <ExternalLink size={14} className="opacity-70" />
-                  </a>
-                ) : (
-                  <div className="w-full py-3 rounded-xl bg-[#21262d]/50 border border-[#30363d]/60 text-center text-xs font-mono text-[#8b949e]">
-                    Internal Core Team · Spark Station
-                  </div>
-                )}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/${member.slug}`);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="w-full py-3 rounded-xl flex items-center justify-center gap-2 text-sm font-semibold transition-all border no-underline cursor-pointer"
+                  style={{
+                    background: member.slug === 'saksham-pandey'
+                      ? 'linear-gradient(135deg, rgba(88,166,255,0.15) 0%, rgba(139,92,246,0.15) 100%)'
+                      : `${member.color}15`,
+                    color: member.color,
+                    borderColor: member.slug === 'saksham-pandey'
+                      ? 'rgba(88,166,255,0.35)'
+                      : `${member.color}35`,
+                  }}
+                >
+                  <Users size={16} />
+                  <span>{member.slug === 'saksham-pandey' ? 'View Bento Profile' : 'View Profile'}</span>
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
             </div>
           ))}
