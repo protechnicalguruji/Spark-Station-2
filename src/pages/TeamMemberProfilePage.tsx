@@ -13,7 +13,8 @@ import {
   Phone, 
   ExternalLink,
   Award,
-  Sparkles
+  Sparkles,
+  Github
 } from 'lucide-react';
 import { TEAM } from '../data/agencyData';
 import { SEO } from '../components/SEO';
@@ -401,6 +402,20 @@ export const TeamMemberProfilePage: React.FC<TeamMemberProfilePageProps> = ({ on
                       <svg viewBox="0 0 24 24" className="w-4.5 h-4.5 fill-current" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.763.456 3.486 1.321 5.016l-1.405 5.127 5.244-1.376c1.478.807 3.136 1.233 4.844 1.233 5.524 0 10.004-4.48 10.004-10.004C22.008 6.48 17.528 2 12.004 2zm6.657 13.914c-.274.773-1.394 1.408-1.921 1.488-.475.071-.97.098-1.57-.101-.6-.2-2.583-.984-4.945-3.092-1.96-1.75-3.23-3.915-3.614-4.576-.385-.662-.41-1.127-.122-1.465.15-.175.324-.374.486-.562.162-.187.216-.312.324-.525.108-.212.054-.4-.027-.562-.08-.162-.729-1.757-.999-2.41-.262-.637-.53-.55-.729-.56-.188-.01-.405-.01-.62-.01-.216 0-.568.081-.865 1.135-.297 1.054-1.135 2.62-1.135 2.836 0 .216.189.405.432.568.243.162 2.27 3.457 5.497 4.86.768.334 1.368.533 1.836.685.772.245 1.474.21 2.03.127.62-.092 1.923-.787 2.193-1.545.27-1.546.27-1.405.189-1.545-.081-.14-.3-.216-.62-.379l-2.92-1.432c-.324-.162-.562-.08-.756.162l-.973 1.189c-.189.243-.432.27-.756.108-.324-.162-1.368-.505-2.607-1.614z" />
                       </svg>
+                    </a>
+                  )}
+
+                  {/* GitHub */}
+                  {member.socials?.github && (
+                    <a 
+                      href={member.socials.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-[#21262d] hover:bg-white/10 border border-[#30363d] hover:border-white/30 flex items-center justify-center text-[#c9d1d9] hover:text-white transition-all hover:-translate-y-1"
+                      title="GitHub"
+                      aria-label="GitHub profile"
+                    >
+                      <Github size={18} />
                     </a>
                   )}
                 </div>

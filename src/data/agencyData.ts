@@ -292,7 +292,8 @@ export const TEAM: TeamMember[] = [
       twitter: "https://x.com/crazy_saksham",
       instagram: "https://www.instagram.com/sakshampandey.x/",
       snapchat: "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
-      whatsapp: "https://wa.me/919111376314"
+      whatsapp: "https://wa.me/919111376314",
+      github: "https://github.com/protechnicalguruji"
     }
   },
   {
