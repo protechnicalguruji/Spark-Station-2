@@ -30,12 +30,34 @@ export const ContactPage: React.FC = () => {
     setSubmitted(false);
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Spark Station",
+    "description": "Get in touch with Spark Station. Let's discuss your custom web application, UI/UX design, or branding project and build something remarkable together.",
+    "url": "https://spark-station-2.vercel.app/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Spark Station",
+      "email": "protechnicalguruji1@gmail.com",
+      "telephone": "+919111376314",
+      "sameAs": [
+        "https://www.linkedin.com/in/saksham-pandey-002485280/",
+        "https://www.instagram.com/sakshampandey.x/",
+        "https://x.com/crazy_saksham",
+        "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
+        "https://wa.me/919111376314"
+      ]
+    }
+  };
+
   return (
-    <div className="relative min-h-screen py-20">
+    <div className="relative min-h-screen py-20 overflow-x-hidden">
       <SEO 
-        title="Contact Spark Station"
-        description="Get in touch with Spark Station. Let's discuss your next project, custom web app, or tech partnership."
+        title="Contact Us &amp; Start Your Project | Spark Station"
+        description="Get in touch with Spark Station. Let's discuss your custom web application, UI/UX design, or branding project and build something remarkable together."
         path="/contact"
+        schemaMarkup={contactSchema}
       />
       <div className="ambient-glow" />
 

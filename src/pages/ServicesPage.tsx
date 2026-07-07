@@ -11,12 +11,63 @@ interface ServicesPageProps {
 }
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onRouteChange }) => {
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Web Development, UI/UX & Branding Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Spark Station",
+      "url": "https://spark-station-2.vercel.app/"
+    },
+    "description": "Explore custom web application development, expert UI/UX design, performance branding, search engine optimization, and custom technical solutions at Spark Station.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services Catalog",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom-built, lightning-fast web applications using React, TypeScript, and high-performance serverless stacks."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UI/UX Design",
+            "description": "High-fidelity modern designs and interactive user interfaces created with absolute brand precision."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Branding & Identity",
+            "description": "Crafting iconic corporate identities, custom typography pairings, visual guidelines, and brand assets."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO & Growth",
+            "description": "Comprehensive search engine optimization, Core Web Vitals optimization, and modern structured data implementation."
+          }
+        }
+      ]
+    }
+  };
+
   return (
-    <div className="relative min-h-screen py-20">
+    <div className="relative min-h-screen py-20 overflow-x-hidden">
       <SEO 
-        title="Website Development Services | Spark Station"
-        description="Explore our custom website development, UI/UX design, and digital agency services tailored to scale your business."
+        title="Web Development, UI/UX &amp; Digital Agency Services | Spark Station"
+        description="Explore custom web application development, expert UI/UX design, performance branding, search engine optimization, and custom technical solutions at Spark Station."
         path="/services"
+        schemaMarkup={servicesSchema}
       />
       <div className="ambient-glow" />
 

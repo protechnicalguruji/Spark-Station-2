@@ -17,12 +17,12 @@ export const SEO: React.FC<SEOProps> = ({
   description,
   path,
   ogType = 'website',
-  ogImage = 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&auto=format&fit=crop&q=80', // Default high-quality visual
+  ogImage = 'https://spark-station-2.vercel.app/apple-touch-icon.png', // Default premium brand icon
   schemaMarkup,
   robots = 'index, follow',
   themeColor = '#0d1117',
 }) => {
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency';
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://spark-station-2.vercel.app';
   const canonicalUrl = `${origin}${path}`;
 
   return (

@@ -73,7 +73,7 @@ function AppContent() {
     <div className="min-h-screen flex flex-col bg-[#0d1117] text-[#c9d1d9] selection:bg-[#58A6FF]/30 selection:text-white">
       <Navbar activeRoute={activeRoute} onRouteChange={handleRouteChange} />
       
-      <main className="flex-1 pt-24 md:pt-28">
+      <main className="flex-1 pt-24 md:pt-28 w-full overflow-x-hidden">
         <Routes>
           <Route path="/" element={<HomePage onRouteChange={handleRouteChange} />} />
           <Route path="/services" element={<ServicesPage onRouteChange={handleRouteChange} />} />

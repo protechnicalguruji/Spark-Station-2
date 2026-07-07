@@ -47,25 +47,28 @@ export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) =>
           : 'top-4 w-[calc(100%-2rem)] max-w-7xl rounded-3xl bg-[#0d1117]/75 border-[#30363d]/80 shadow-lg shadow-black/40'
       }`}
     >
-      <div className={`w-full max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${
+      <div className={`w-full max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between transition-all duration-500 ${
         scrolled ? 'h-16' : 'h-20'
       }`}>
         {/* Logo */}
         <button
           onClick={() => handleNavClick('home')}
           className="flex items-center text-left focus:outline-none group cursor-pointer"
+          aria-label="Spark Station Home"
         >
           <Logo size={40} showText={true} />
         </button>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#161b22]/90 p-1.5 rounded-full border border-[#30363d]">
+        <nav className="hidden md:flex items-center gap-1 bg-[#161b22]/90 p-1.5 rounded-full border border-[#30363d]" aria-label="Desktop Navigation">
           {navLinks.map((link) => {
             const isActive = activeRoute === link.route;
             return (
               <button
                 key={link.route}
                 onClick={() => handleNavClick(link.route)}
+                aria-label={`Navigate to ${link.label}`}
+                aria-current={isActive ? 'page' : undefined}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
                   isActive
                     ? 'bg-gradient-to-r from-[#58A6FF]/20 to-[#8B5CF6]/20 text-white font-semibold border border-[#58A6FF]/40 shadow-sm'

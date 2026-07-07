@@ -12,33 +12,60 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
-  const orgSchema = {
+  const homeSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Spark Station",
-    "url": typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency',
-    "logo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
-    "description": "Spark Station builds premium websites, landing pages and modern digital experiences.",
-    "sameAs": [
-      "https://www.linkedin.com",
-      "https://twitter.com",
-      "https://www.instagram.com"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Gwalior",
-      "addressRegion": "Madhya Pradesh",
-      "addressCountry": "India"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://spark-station-2.vercel.app/#website",
+        "url": "https://spark-station-2.vercel.app/",
+        "name": "Spark Station",
+        "description": "Spark Station is a premium digital agency helping businesses grow through modern website development, UI/UX design, branding, SEO, and high-converting digital solutions.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://spark-station-2.vercel.app/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://spark-station-2.vercel.app/#organization",
+        "name": "Spark Station",
+        "url": "https://spark-station-2.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://spark-station-2.vercel.app/favicon.png",
+          "caption": "Spark Station Logo"
+        },
+        "description": "Spark Station is a premium digital agency helping businesses grow through modern website development, UI/UX design, branding, SEO, and high-converting digital solutions.",
+        "founder": {
+          "@type": "Person",
+          "name": "Saksham Pandey",
+          "jobTitle": "Founder & CEO"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/saksham-pandey-002485280/",
+          "https://www.instagram.com/sakshampandey.x/",
+          "https://x.com/crazy_saksham",
+          "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
+          "https://wa.me/919111376314"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "protechnicalguruji1@gmail.com",
+          "contactType": "customer service",
+          "telephone": "+919111376314"
+        }
+      }
+    ]
   };
 
   return (
     <div className="relative overflow-hidden min-h-screen">
       <SEO 
-        title="Spark Station | Premium Website Development Agency"
-        description="Spark Station builds premium websites, landing pages and modern digital experiences."
+        title="Spark Station | Premium Web Development, UI/UX & Branding Agency"
+        description="Spark Station is a premium digital agency helping businesses grow through modern website development, UI/UX design, branding, SEO, and high-converting digital solutions."
         path="/"
-        schemaMarkup={orgSchema}
+        schemaMarkup={homeSchema}
       />
       {/* Ambient Glow */}
       <div className="ambient-glow" />

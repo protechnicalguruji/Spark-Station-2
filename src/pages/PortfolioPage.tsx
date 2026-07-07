@@ -21,12 +21,25 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onRouteChange }) =
 
   const filteredProjects = activeTab === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === activeTab);
 
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Spark Station Portfolio",
+    "description": "Explore our web development portfolio, custom software development case studies, UI/UX designs, and corporate brand assets delivered with pixel precision.",
+    "creator": {
+      "@type": "Organization",
+      "name": "Spark Station",
+      "url": "https://spark-station-2.vercel.app/"
+    }
+  };
+
   return (
-    <div className="relative min-h-screen py-20">
+    <div className="relative min-h-screen py-20 overflow-x-hidden">
       <SEO 
-        title="Portfolio | Spark Station"
-        description="Our digital masterpieces. Check out the hand-crafted web applications, brand identities, and tech solutions we've delivered."
+        title="Our Work, Web Projects &amp; UI/UX Case Studies | Spark Station"
+        description="Explore our web development portfolio, custom software development case studies, UI/UX designs, and corporate brand assets delivered with pixel precision."
         path="/portfolio"
+        schemaMarkup={portfolioSchema}
       />
       <div className="ambient-glow" />
 

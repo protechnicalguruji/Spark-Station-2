@@ -69,24 +69,25 @@ export const TeamMemberProfilePage: React.FC<TeamMemberProfilePageProps> = ({ on
     "jobTitle": member.role,
     "worksFor": {
       "@type": "Organization",
-      "name": "Spark Station"
+      "name": "Spark Station",
+      "url": "https://spark-station-2.vercel.app/"
     },
     "description": member.bio,
-    "image": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + member.avatarUrl,
+    "image": "https://spark-station-2.vercel.app" + member.avatarUrl,
     ...(member.socials?.email && { "email": member.socials.email }),
-    "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + `/${member.slug}`
+    "url": "https://spark-station-2.vercel.app" + `/${member.slug}`
   };
 
   const hasSocials = member.socials && Object.values(member.socials).some(Boolean);
 
   return (
-    <div className="relative min-h-screen py-10 md:py-16">
+    <div className="relative min-h-screen py-10 md:py-16 overflow-x-hidden">
       <SEO 
         title={`${member.name} | ${member.role} of Spark Station`}
         description={member.bio || `Official profile of ${member.name}, ${member.role} at Spark Station.`}
         path={`/${member.slug}`}
         ogType="profile"
-        ogImage={(typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + member.avatarUrl}
+        ogImage={"https://spark-station-2.vercel.app" + member.avatarUrl}
         schemaMarkup={personSchema}
       />
       

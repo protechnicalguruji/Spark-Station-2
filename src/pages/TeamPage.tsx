@@ -12,12 +12,32 @@ interface TeamPageProps {
 
 export const TeamPage: React.FC<TeamPageProps> = ({ onRouteChange }) => {
   const navigate = useNavigate();
+
+  const teamSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Spark Station Team",
+    "description": "Get to know the senior engineers, visual designers, and digital strategists at Spark Station.",
+    "itemListElement": TEAM.map((member, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "item": {
+        "@type": "Person",
+        "name": member.name,
+        "jobTitle": member.role,
+        "image": `https://spark-station-2.vercel.app${member.avatarUrl}`,
+        "url": `https://spark-station-2.vercel.app/${member.slug}`
+      }
+    }))
+  };
+
   return (
-    <div className="relative min-h-screen py-20">
+    <div className="relative min-h-screen py-20 overflow-x-hidden">
       <SEO 
-        title="Meet the Team | Spark Station"
-        description="Get to know the passionate minds building digital solutions, websites, and custom business software at Spark Station."
+        title="Meet Our Expert Web Creators &amp; Specialists | Spark Station"
+        description="Get to know the senior engineers, visual designers, and digital strategists at Spark Station. We build premium React sites, UI/UX designs, and growth campaigns."
         path="/team"
+        schemaMarkup={teamSchema}
       />
       <div className="ambient-glow" />
 

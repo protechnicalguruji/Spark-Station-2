@@ -37,12 +37,12 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
     "worksFor": {
       "@type": "Organization",
       "name": "Spark Station",
-      "url": typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency'
+      "url": "https://spark-station-2.vercel.app/"
     },
-    "description": "Saksham Pandey is the Founder of Spark Station, a Web Developer with 18+ months of experience and a Cybersecurity Enthusiast with 4+ years of experience. Based in Gwalior, India.",
-    "image": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/saksham.jpeg",
+    "description": "Saksham Pandey is the Founder & CEO of Spark Station, an expert Web Developer and Cybersecurity Enthusiast with 4+ years of digital experience. Based in Gwalior, India.",
+    "image": "https://spark-station-2.vercel.app/saksham.jpeg",
     "email": "protechnicalguruji1@gmail.com",
-    "url": (typeof window !== 'undefined' ? window.location.origin : 'https://sparkstation.agency') + "/saksham-pandey",
+    "url": "https://spark-station-2.vercel.app/saksham-pandey",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Gwalior",
@@ -50,10 +50,11 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
       "addressCountry": "India"
     },
     "sameAs": [
-      "https://www.linkedin.com",
-      "https://www.instagram.com",
-      "https://twitter.com",
-      "https://www.snapchat.com"
+      "https://www.linkedin.com/in/saksham-pandey-002485280/",
+      "https://www.instagram.com/sakshampandey.x/",
+      "https://x.com/crazy_saksham",
+      "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
+      "https://wa.me/919111376314"
     ]
   };
 
