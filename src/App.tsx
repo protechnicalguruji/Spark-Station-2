@@ -16,6 +16,9 @@ import { TeamPage } from './pages/TeamPage';
 import { ContactPage } from './pages/ContactPage';
 import { FounderPage } from './pages/FounderPage';
 import { TeamMemberProfilePage } from './pages/TeamMemberProfilePage';
+import { BlogListPage } from './pages/BlogListPage';
+import { BlogPostPage } from './pages/BlogPostPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -31,6 +34,12 @@ function AppContent() {
       decodedPath.startsWith('/team/')
     ) {
       return 'team';
+    }
+    if (decodedPath.startsWith('/blog')) {
+      return 'blog';
+    }
+    if (decodedPath.startsWith('/admin')) {
+      return 'admin';
     }
     switch (decodedPath) {
       case '/':
@@ -87,6 +96,9 @@ function AppContent() {
           <Route path="/niket" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
           <Route path="/manas" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
           <Route path="/team/:slug" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
+          <Route path="/blog" element={<BlogListPage onRouteChange={handleRouteChange} />} />
+          <Route path="/blog/:slug" element={<BlogPostPage onRouteChange={handleRouteChange} />} />
+          <Route path="/admin" element={<AdminDashboardPage onRouteChange={handleRouteChange} />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* Fallback route */}
           <Route path="*" element={<HomePage onRouteChange={handleRouteChange} />} />

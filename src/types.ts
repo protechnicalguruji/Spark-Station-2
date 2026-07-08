@@ -53,4 +53,4 @@ export interface ProjectItem {
   image: string;
 }
 
-export type PageRoute = 'home' | 'services' | 'portfolio' | 'team' | 'contact' | 'founder';
+export type PageRoute = 'home' | 'services' | 'portfolio' | 'team' | 'contact' | 'founder' | 'blog' | 'admin';

@@ -29,6 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeRoute, onRouteChange }) =>
     { label: 'Home', route: 'home' },
     { label: 'Services', route: 'services' },
     { label: 'Portfolio', route: 'portfolio' },
+    { label: 'Blog', route: 'blog' },
     { label: 'Team', route: 'team' },
     { label: 'Contact', route: 'contact' },
   ];

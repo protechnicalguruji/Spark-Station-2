@@ -79,6 +79,11 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => handleLink('blog')} className="hover:text-white transition-colors cursor-pointer">
+                  Blog
+                </button>
+              </li>
+              <li>
                 <button onClick={() => handleLink('team')} className="hover:text-white transition-colors cursor-pointer">
                   Team
                 </button>
