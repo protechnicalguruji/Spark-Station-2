@@ -71,7 +71,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onRouteChange }) => {
             </a>
 
             <a
-              href={`tel:${AGENCY_INFO.call}`}
+              href={`tel:${AGENCY_INFO.callManas}`}
               className="p-4 rounded-xl bg-[#0d1117]/60 border border-[#30363d] hover:border-[#58A6FF]/40 transition-all group flex items-center gap-3.5 no-underline"
             >
               <div className="w-10 h-10 rounded-lg bg-[#58A6FF]/15 text-[#58A6FF] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -80,7 +80,7 @@ export const CTASection: React.FC<CTASectionProps> = ({ onRouteChange }) => {
               <div className="overflow-hidden">
                 <span className="text-xs text-[#8b949e] block">Call Us</span>
                 <span className="text-sm font-mono text-white font-medium truncate block">
-                  {AGENCY_INFO.call}
+                  {AGENCY_INFO.callManas}
                 </span>
                 <span className="text-[10px] text-[#34D399] block">Manas · Client Relations</span>
               </div>

@@ -449,7 +449,7 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({ onRouteC
             <div className="border-t border-[#30363d]/40 mt-8 pt-6 text-center">
               <button
                 onClick={() => {
-                  setEmail('protechnicalguruji1@gmail.com');
+                  setEmail('sparkstation.x@gmail.com');
                   setPassword('SparkAdmin2026!');
                   showToast('Auto-filled default administrative testing credentials', 'info');
                 }}
@@ -490,7 +490,7 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({ onRouteC
                 <span className="text-[#8b949e] font-sans font-light text-xl">/ Dashboard</span>
               </h1>
               <p className="text-sm text-[#8b949e] mt-1">
-                Authorized editor: <strong className="text-white">Saksham Pandey</strong> (protechnicalguruji1@gmail.com)
+                Authorized editor: <strong className="text-white">Saksham Pandey</strong> (sparkstation.x@gmail.com)
               </p>
             </div>
 

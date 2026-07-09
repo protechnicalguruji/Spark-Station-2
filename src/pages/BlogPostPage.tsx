@@ -571,7 +571,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onRouteChange }) => 
                   <Instagram size={15} />
                 </a>
                 <a 
-                  href="mailto:protechnicalguruji1@gmail.com" 
+                  href="mailto:sparkstation.x@gmail.com" 
                   className="text-[#8b949e] hover:text-white transition-colors"
                 >
                   <Mail size={15} />

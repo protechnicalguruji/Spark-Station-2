@@ -41,7 +41,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
     },
     "description": "Saksham Pandey is the Founder & CEO of Spark Station, an expert Web Developer and Cybersecurity Enthusiast with 4+ years of digital experience. Based in Gwalior, India.",
     "image": "https://spark-station-2.vercel.app/saksham.jpeg",
-    "email": "protechnicalguruji1@gmail.com",
+    "email": "sparkstation.x@gmail.com",
     "url": "https://spark-station-2.vercel.app/saksham-pandey",
     "address": {
       "@type": "PostalAddress",
@@ -416,8 +416,8 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
                 <div className="mt-4 space-y-2">
                   <div className="flex items-center gap-2.5 text-xs text-[#8b949e]">
                     <Mail size={13} className="text-[#58A6FF]" />
-                    <a href="mailto:protechnicalguruji1@gmail.com" className="hover:text-white hover:underline transition-colors">
-                      protechnicalguruji1@gmail.com
+                    <a href="mailto:sparkstation.x@gmail.com" className="hover:text-white hover:underline transition-colors">
+                      sparkstation.x@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs text-[#8b949e]">
@@ -430,13 +430,13 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
               <div className="flex flex-wrap gap-2.5 md:justify-end">
                 {/* Email Button */}
                 <a 
-                  href="mailto:protechnicalguruji1@gmail.com"
+                  href="mailto:sparkstation.x@gmail.com"
                   className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#21262d] hover:bg-[#58A6FF]/10 border border-[#30363d] hover:border-[#58A6FF]/40 text-xs font-medium text-[#c9d1d9] hover:text-[#58A6FF] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(88,166,255,0.15)] focus:outline-none focus:ring-2 focus:ring-[#58A6FF] focus:ring-offset-2 focus:ring-offset-[#0d1117]"
-                  title="Email: protechnicalguruji1@gmail.com"
-                  aria-label="Send email to protechnicalguruji1@gmail.com"
+                  title="Email: sparkstation.x@gmail.com"
+                  aria-label="Send email to sparkstation.x@gmail.com"
                 >
                   <Mail size={15} />
-                  <span className="font-mono">protechnicalguruji1@gmail.com</span>
+                  <span className="font-mono">sparkstation.x@gmail.com</span>
                 </a>
 
                 {/* LinkedIn Button */}

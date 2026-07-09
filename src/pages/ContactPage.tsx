@@ -39,8 +39,26 @@ export const ContactPage: React.FC = () => {
     "mainEntity": {
       "@type": "Organization",
       "name": "Spark Station",
-      "email": "protechnicalguruji1@gmail.com",
+      "email": "sparkstation.x@gmail.com",
       "telephone": "+919111376314",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+919111376314",
+          "contactType": "customer service",
+          "email": "sparkstation.x@gmail.com",
+          "availableLanguage": ["English", "Hindi"],
+          "areaServed": "IN"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+917224935780",
+          "contactType": "sales",
+          "email": "manas@sparkstation.agency",
+          "availableLanguage": ["English", "Hindi"],
+          "areaServed": "IN"
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/in/saksham-pandey-002485280/",
         "https://www.instagram.com/sakshampandey.x/",
@@ -99,21 +117,21 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">WhatsApp</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">WhatsApp &amp; Direct</span>
                       <ArrowUpRight size={16} className="text-[#8b949e] group-hover:text-[#25D366]" />
                     </div>
                     <span className="text-base font-mono font-medium text-white block mt-1">
                       {AGENCY_INFO.whatsapp}
                     </span>
                     <span className="text-xs text-[#58A6FF] block mt-1">
-                      Saksham Pandey · Consultation
+                      Saksham Pandey · Founder &amp; CEO
                     </span>
                   </div>
                 </a>
 
-                {/* Call */}
+                {/* Call - Saksham */}
                 <a
-                  href={`tel:${AGENCY_INFO.call}`}
+                  href={`tel:${AGENCY_INFO.callSaksham}`}
                   className="p-5 rounded-2xl bg-[#21262d]/60 border border-[#30363d] hover:border-[#58A6FF]/50 transition-all flex items-start gap-4 no-underline group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#58A6FF]/15 text-[#58A6FF] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -121,14 +139,36 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">Call Us</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">Direct Call</span>
                       <ArrowUpRight size={16} className="text-[#8b949e] group-hover:text-[#58A6FF]" />
                     </div>
                     <span className="text-base font-mono font-medium text-white block mt-1">
-                      {AGENCY_INFO.call}
+                      {AGENCY_INFO.callSaksham}
+                    </span>
+                    <span className="text-xs text-[#58A6FF] block mt-1">
+                      Saksham Pandey · Founder &amp; CEO
+                    </span>
+                  </div>
+                </a>
+
+                {/* Call - Manas */}
+                <a
+                  href={`tel:${AGENCY_INFO.callManas}`}
+                  className="p-5 rounded-2xl bg-[#21262d]/60 border border-[#30363d] hover:border-[#34D399]/50 transition-all flex items-start gap-4 no-underline group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#34D399]/15 text-[#34D399] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Phone size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-[#8b949e]">Client Relations Call</span>
+                      <ArrowUpRight size={16} className="text-[#8b949e] group-hover:text-[#34D399]" />
+                    </div>
+                    <span className="text-base font-mono font-medium text-white block mt-1">
+                      {AGENCY_INFO.callManas}
                     </span>
                     <span className="text-xs text-[#34D399] block mt-1">
-                      Manas · Client Relations
+                      Manas · Project Coordinator
                     </span>
                   </div>
                 </a>

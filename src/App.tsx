@@ -19,6 +19,7 @@ import { TeamMemberProfilePage } from './pages/TeamMemberProfilePage';
 import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
+import { TEAM } from './data/agencyData';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -27,12 +28,11 @@ function AppContent() {
   // Map pathname to PageRoute
   const getActiveRoute = (pathname: string): PageRoute => {
     const decodedPath = decodeURIComponent(pathname);
-    if (
-      decodedPath === '/shashwat' || 
-      decodedPath === '/niket' || 
-      decodedPath === '/manas' || 
-      decodedPath.startsWith('/team/')
-    ) {
+    const pathSegment = decodedPath.replace(/^\//, '');
+
+    // Check dynamically if pathSegment is a team member's slug or under /team/
+    const isTeamMember = TEAM.some(member => member.slug === pathSegment) || decodedPath.startsWith('/team/');
+    if (isTeamMember) {
       return 'team';
     }
     if (decodedPath.startsWith('/blog')) {
@@ -92,9 +92,15 @@ function AppContent() {
           <Route path="/saksham-pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham%20Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
-          <Route path="/shashwat" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
-          <Route path="/niket" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
-          <Route path="/manas" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
+          {TEAM.filter(m => m.slug !== 'saksham-pandey').map((member) => (
+            <Route 
+              {...({
+                key: member.slug,
+                path: `/${member.slug}`,
+                element: <TeamMemberProfilePage onRouteChange={handleRouteChange} />
+              } as any)}
+            />
+          ))}
           <Route path="/team/:slug" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
           <Route path="/blog" element={<BlogListPage onRouteChange={handleRouteChange} />} />
           <Route path="/blog/:slug" element={<BlogPostPage onRouteChange={handleRouteChange} />} />

@@ -409,15 +409,16 @@ export const blogService = {
     }
 
     // Local Storage Fallback (Admin user check)
-    // Accept user email or developer email 'protechnicalguruji1@gmail.com'
+    // Accept user email or developer email 'sparkstation.x@gmail.com' / 'protechnicalguruji1@gmail.com'
+    const allowedEmails = ['sparkstation.x@gmail.com', 'protechnicalguruji1@gmail.com', 'admin@sparkstation.agency'];
     if (
-      (email.toLowerCase() === 'protechnicalguruji1@gmail.com' || email.toLowerCase() === 'admin@sparkstation.agency') &&
+      allowedEmails.includes(email.toLowerCase()) &&
       password === 'SparkAdmin2026!'
     ) {
       localStorage.setItem(AUTH_SESSION_KEY, JSON.stringify({ email, token: 'mock-jwt-token-' + Date.now() }));
       return { success: true };
     }
-    return { success: false, error: 'Invalid admin credentials. Hint: use protechnicalguruji1@gmail.com and SparkAdmin2026!' };
+    return { success: false, error: 'Invalid admin credentials. Hint: use sparkstation.x@gmail.com and SparkAdmin2026!' };
   },
 
   logout() {

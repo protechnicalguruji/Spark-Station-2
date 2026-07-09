@@ -118,19 +118,18 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
             </h4>
             <div className="space-y-4 text-sm">
               <div>
-                <span className="text-xs text-[#8b949e] block">Consultation (WhatsApp)</span>
-                <a href={AGENCY_INFO.whatsappUrl} target="_blank" rel="noreferrer" className="text-white hover:text-[#25D366] font-mono flex items-center gap-1 mt-0.5">
-                  {AGENCY_INFO.whatsapp}
-                  <ArrowUpRight size={14} className="opacity-70" />
+                <span className="text-xs text-[#8b949e] block">Consultation (WhatsApp &amp; Call)</span>
+                <a href={`tel:${AGENCY_INFO.callSaksham}`} className="text-white hover:text-[#58A6FF] font-mono flex items-center gap-1 mt-0.5">
+                  {AGENCY_INFO.callSaksham}
                 </a>
-                <span className="text-[11px] text-[#58A6FF] block mt-0.5">Saksham Pandey</span>
+                <span className="text-[11px] text-[#58A6FF] block mt-0.5">Saksham Pandey (Founder)</span>
               </div>
               <div>
                 <span className="text-xs text-[#8b949e] block">Client Relations (Call)</span>
-                <a href={`tel:${AGENCY_INFO.call}`} className="text-white hover:text-[#58A6FF] font-mono flex items-center gap-1 mt-0.5">
-                  {AGENCY_INFO.call}
+                <a href={`tel:${AGENCY_INFO.callManas}`} className="text-white hover:text-[#34D399] font-mono flex items-center gap-1 mt-0.5">
+                  {AGENCY_INFO.callManas}
                 </a>
-                <span className="text-[11px] text-[#34D399] block mt-0.5">Manas</span>
+                <span className="text-[11px] text-[#34D399] block mt-0.5">Manas (Project Coordinator)</span>
               </div>
               <div>
                 <span className="text-xs text-[#8b949e] block">Business Email</span>

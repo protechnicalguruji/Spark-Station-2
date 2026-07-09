@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { 
   ArrowLeft, 
@@ -26,15 +26,19 @@ interface TeamMemberProfilePageProps {
 
 export const TeamMemberProfilePage: React.FC<TeamMemberProfilePageProps> = ({ onRouteChange }) => {
   const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  // Find the team member by slug
-  const member = TEAM.find(m => m.slug === slug);
+  // Resolve slug either from useParams (e.g. /team/:slug) or from pathname (e.g. /manas)
+  const resolvedSlug = slug || pathname.split('/').filter(Boolean).pop();
 
-  // Scroll to top when the component loads
+  // Find the team member by slug
+  const member = TEAM.find(m => m.slug === resolvedSlug);
+
+  // Scroll to top when the component loads or slug changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-  }, [slug]);
+  }, [resolvedSlug]);
 
   if (!member) {
     // If team member doesn't exist, render a beautiful 404/not found state

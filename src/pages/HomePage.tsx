@@ -49,12 +49,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
           "https://www.snapchat.com/@sakshampande.x?share_id=_KJ6klHB2G0&locale=en-IN",
           "https://wa.me/919111376314"
         ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "protechnicalguruji1@gmail.com",
-          "contactType": "customer service",
-          "telephone": "+919111376314"
-        }
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "sparkstation.x@gmail.com",
+            "contactType": "customer service",
+            "telephone": "+919111376314",
+            "availableLanguage": ["English", "Hindi"],
+            "areaServed": "IN"
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "manas@sparkstation.agency",
+            "contactType": "sales",
+            "telephone": "+917224935780",
+            "availableLanguage": ["English", "Hindi"],
+            "areaServed": "IN"
+          }
+        ]
       }
     ]
   };

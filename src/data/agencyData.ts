@@ -7,7 +7,9 @@ export const AGENCY_INFO = {
   copyright: "© 2026 Spark Station. All rights reserved.",
   whatsapp: "+91 9111376314",
   whatsappUrl: "https://wa.me/919111376314?text=Hi%2C%20I%27d%20like%20a%20free%20consultation",
-  call: "+91 7224935780",
+  call: "+91 9111376314",
+  callSaksham: "+91 9111376314",
+  callManas: "+91 7224935780",
   email: "sparkstation.x@gmail.com"
 };
 
@@ -287,7 +289,7 @@ export const TEAM: TeamMember[] = [
       }
     ],
     socials: {
-      email: "protechnicalguruji1@gmail.com",
+      email: "sparkstation.x@gmail.com",
       linkedin: "https://www.linkedin.com/in/saksham-pandey-002485280/",
       twitter: "https://x.com/crazy_saksham",
       instagram: "https://www.instagram.com/sakshampandey.x/",
