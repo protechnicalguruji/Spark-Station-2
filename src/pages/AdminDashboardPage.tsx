@@ -189,7 +189,7 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({ onRouteC
       category,
       publish_date: publishDate,
       author_name: 'Saksham Pandey',
-      author_avatar: '/saksham.jpeg',
+      author_avatar: '/saksham.png',
       reading_time: readingTime,
       content,
       status: currentStatus,

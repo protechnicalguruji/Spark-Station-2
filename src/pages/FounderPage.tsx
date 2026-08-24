@@ -40,7 +40,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
       "url": "https://spark-station-2.vercel.app/"
     },
     "description": "Saksham Pandey is the Founder & CEO of Spark Station, an expert Web Developer and Cybersecurity Enthusiast with 4+ years of digital experience. Based in Gwalior, India.",
-    "image": "https://spark-station-2.vercel.app/saksham.jpeg",
+    "image": "https://spark-station-2.vercel.app/saksham.png",
     "email": "sparkstation.x@gmail.com",
     "url": "https://spark-station-2.vercel.app/saksham-pandey",
     "address": {
@@ -133,7 +133,7 @@ export const FounderPage: React.FC<FounderPageProps> = ({ onRouteChange }) => {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-[#58A6FF]/40 shadow-xl relative bg-[#21262d]">
                   <img 
-                    src="/saksham.jpeg" 
+                    src="/saksham.png" 
                     alt="Saksham Pandey Founder of Spark Station" 
                     className="w-full h-full object-cover"
                     loading="lazy"

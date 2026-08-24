@@ -92,15 +92,18 @@ function AppContent() {
           <Route path="/saksham-pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
           <Route path="/Saksham%20Pandey" element={<FounderPage onRouteChange={handleRouteChange} />} />
-          {TEAM.filter(m => m.slug !== 'saksham-pandey').map((member) => (
-            <Route 
-              {...({
-                key: member.slug,
-                path: `/${member.slug}`,
-                element: <TeamMemberProfilePage onRouteChange={handleRouteChange} />
-              } as any)}
-            />
-          ))}
+          {TEAM.filter(m => m.slug !== 'saksham-pandey').map((member) => {
+            const routeProps = {
+              path: `/${member.slug}`,
+              element: <TeamMemberProfilePage onRouteChange={handleRouteChange} />
+            };
+            return (
+              <Route 
+                key={member.slug}
+                {...(routeProps as any)}
+              />
+            );
+          })}
           <Route path="/team/:slug" element={<TeamMemberProfilePage onRouteChange={handleRouteChange} />} />
           <Route path="/blog" element={<BlogListPage onRouteChange={handleRouteChange} />} />
           <Route path="/blog/:slug" element={<BlogPostPage onRouteChange={handleRouteChange} />} />

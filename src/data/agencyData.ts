@@ -267,7 +267,7 @@ export const TEAM: TeamMember[] = [
     contact: "founder", // custom flag to trigger founder page routing
     skills: ["Web Development", "Cybersecurity", "UI/UX Design", "Linux", "React / Vite", "Node.js", "Penetration Testing"],
     color: "#58A6FF",
-    avatarUrl: "/saksham.jpeg",
+    avatarUrl: "/saksham.png",
     responsibilities: [
       "Full-Stack Web Development",
       "Cybersecurity Auditing & Hardening",
