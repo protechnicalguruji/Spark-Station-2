@@ -408,6 +408,37 @@ export const TEAM: TeamMember[] = [
       email: "manas@sparkstation.agency",
       linkedin: "https://www.linkedin.com"
     }
+  },
+  {
+    slug: "yug",
+    name: "Yug Yadav",
+    role: "Client Relations Manager",
+    bio: "Focused on ensuring seamless communication and unparalleled client satisfaction across all project lifecycles.",
+    tagline: "Client Relations & Success Manager.",
+    aboutLong: "Yug is an integral part of our client relations team at Spark Station, bridging the gap between technical execution and business requirements. With a strong background in client relationship management, Yug facilitates transparent communication, seamless onboarding workflows, and absolute client satisfaction.",
+    experience: "2 Years",
+    contact: "mailto:yug@sparkstation.agency",
+    skills: ["Client Relations", "Account Management", "Consultation", "Communication Strategy", "Project Workflows"],
+    color: "#60A5FA",
+    avatarUrl: "/yug.jpeg",
+    responsibilities: [
+      "Client Communication & Relationship Management",
+      "Requirements Elicitation & Scope Alignment",
+      "Quality Assurance & Feedback Loop Facilitation",
+      "Onboarding & Account Growth Strategy"
+    ],
+    experienceList: [
+      {
+        role: "Client Relations Manager",
+        company: "Spark Station",
+        period: "2024 - Present",
+        desc: "Managing client communication, maintaining relationships, and ensuring transparent project pipelines."
+      }
+    ],
+    socials: {
+      email: "yug@sparkstation.agency",
+      linkedin: "https://www.linkedin.com"
+    }
   }
 ];
 
